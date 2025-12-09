@@ -47,18 +47,10 @@ get_header();
                 </div>
             </div>
 
-            <div class="notify-section">
-                <p class="notify-text">Get notified when we launch</p>
-                <form class="notify-form">
-                    <input type="email" placeholder="Enter your email" class="email-input" required>
-                    <button type="submit" class="notify-btn">Notify Me</button>
-                </form>
-            </div>
-
             <div class="social-links">
-                <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="social-icon"><i class="fa fa-pinterest"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
             </div>
         </div>
 
