@@ -5,23 +5,100 @@
 get_header();
 ?>
 
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="hero-container">
-        <div class="hero-content">
-            <span class="hero-subtitle">Premium Lash Extensions</span>
-            <h1 class="hero-title">Enhance Your Natural Beauty</h1>
-            <p class="hero-description">Experience the luxury of professionally applied lash extensions that enhance your natural beauty and save you time every morning.</p>
-            <div class="hero-buttons">
-                <a href="#products" class="btn btn-primary">Shop Now</a>
-                <a href="#about" class="btn btn-secondary">Learn More</a>
+<!-- Hero Slider Section -->
+<section class="hero-slider">
+    <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="slide-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/assets/images/slide1.jpg');">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <div class="container">
+                            <div class="content-wrapper">
+                                <span class="slide-subtitle">Premium Lash Collection</span>
+                                <h1 class="slide-title">ELEVATE YOUR<br>NATURAL BEAUTY</h1>
+                                <p class="slide-description">Discover our luxury lash extensions designed to enhance your natural elegance</p>
+                                <div class="slide-buttons">
+                                    <a href="#" class="btn btn-white">SHOP NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="slide-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/assets/images/slide2.jpg');">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <div class="container">
+                            <div class="content-wrapper">
+                                <span class="slide-subtitle">Professional Application</span>
+                                <h1 class="slide-title">EXPERTLY<br>CRAFTED LASHES</h1>
+                                <p class="slide-description">Experience the art of professional lash extension application</p>
+                                <div class="slide-buttons">
+                                    <a href="#" class="btn btn-white">BOOK APPOINTMENT</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <div class="slide-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/assets/images/slide3.jpg');">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <div class="container">
+                            <div class="content-wrapper">
+                                <span class="slide-subtitle">Luxury Experience</span>
+                                <h1 class="slide-title">TRANSFORM<br>YOUR LOOK</h1>
+                                <p class="slide-description">Indulge in the ultimate luxury lash extension experience</p>
+                                <div class="slide-buttons">
+                                    <a href="#" class="btn btn-white">DISCOVER MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="hero-image">
-            <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/hero-lashes.jpg" alt="Luxury Lash Extensions">
-        </div>
+
+        <!-- Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
 </section>
+
+<!-- Initialize Slider -->
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+    var heroSwiper = new Swiper('.hero-swiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        speed: 1000,
+    });
+});
+</script>
 
 <!-- Features Section -->
 <section class="features-section">

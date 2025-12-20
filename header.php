@@ -28,27 +28,37 @@
                         <?php the_custom_logo(); ?>
                     <?php else : ?>
                         <a href="<?php echo home_url('/'); ?>" class="logo-text">
-                            <span class="brand-name">Lupalashes</span>
+                            <span class="brand-name">LUPALASHES</span>
                         </a>
                     <?php endif; ?>
                 </div>
 
                 <nav class="main-navigation">
                     <ul class="nav-menu">
-                        <li><a href="<?php echo home_url('/'); ?>">Home</a></li>
-                        <li><a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>">Shop</a></li>
-                        <li><a href="<?php echo site_url('/about-us'); ?>">About</a></li>
-                        <li><a href="<?php echo site_url('/contact-us'); ?>">Contact</a></li>
+                        <li><a href="<?php echo home_url('/'); ?>">HOME</a></li>
+                        <li class="menu-item-has-children">
+                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>">SHOP</a>
+                        </li>
+                        <li><a href="<?php echo site_url('/about-us'); ?>">ABOUT</a></li>
+                        <li><a href="<?php echo site_url('/contact-us'); ?>">CONTACT</a></li>
                     </ul>
                 </nav>
 
                 <div class="header-actions">
-                    <?php if (class_exists('WooCommerce')) : ?>
-                        <a href="<?php echo wc_get_cart_url(); ?>" class="cart-icon">
-                            <i class="fas fa-shopping-bag"></i>
-                            <span class="cart-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                    <div class="header-icons">
+                        <a href="#" class="header-icon search-icon">
+                            <i class="fas fa-search"></i>
                         </a>
-                    <?php endif; ?>
+                        <a href="#" class="header-icon user-icon">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <?php if (class_exists('WooCommerce')) : ?>
+                            <a href="<?php echo wc_get_cart_url(); ?>" class="header-icon cart-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span class="cart-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                            </a>
+                        <?php endif; ?>
+                    </div>
                     <button class="mobile-menu-toggle">
                         <span></span>
                         <span></span>
