@@ -22,7 +22,7 @@ get_header();
                 <div class="contact-form-wrapper">
                     <h2 class="section-heading">Send us a Message</h2>
                     <p class="section-description">Have a question or want to learn more about our lash services? Fill out the form below and we'll get back to you as soon as possible.</p>
-                    
+
                     <form class="contact-form" action="" method="post">
                         <div class="row">
                             <div class="col-md-6">
@@ -65,7 +65,7 @@ get_header();
             <div class="col-lg-5 col-md-12">
                 <div class="contact-info-wrapper">
                     <h2 class="section-heading">Get in Touch</h2>
-                    
+
                     <div class="contact-info-item">
                         <div class="info-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -131,68 +131,5 @@ get_header();
         </div>
     </div>
 </section>
-
-<?php
-get_footer();
-							<p>
-								<a href="<?php echo $all_feilds['chat']['chat_link']; ?>">
-									<?php echo $all_feilds['chat']['chat_text']; ?>
-								</a>
-							</p>
-						<!-- </div>
-					</div> -->
-				</div>
-				<div class="contact-form-box p-4 mt-3">
-					<div class="row w-100 justify-content-between email-box pb-3 mx-0">
-						<div class="col-3 d-flex justify-content-start align-items-center px-0">
-							<div class="icon-email">
-								<h4 class="mb-0"><?php echo $all_feilds['contact_us_section']['title']; ?></h4>
-							</div>
-						</div>
-						<div class="col px-0">
-							<p>
-								<?php echo $all_feilds['contact_us_section']['sub_title']; ?>
-							</p>
-						</div>
-					</div>
-					<?php echo do_shortcode('[contact-form-7 id="786fd68" title="Contact form 1"]') ?>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- <div class="g-recaptcha" data-sitekey="6Lduc_8pAAAAAJDfVdJ5UT2-KbdaxA6IgSFY5fDG" data-callback="onSubmit" data-action="submit"></div>			 -->
-
-<script>
-	jQuery(document).ready(function($) {
-	var cf7form = $('.wpcf7');
-	if (cf7form) {
-		$(cf7form).each(function(index, el) {
-			if (el) {
-			$(el).find('form').submit(function(event) {
-				$(el).find('form').find('.wpcf7-submit').addClass('disabled');
-				$(el).parents('.form_validation_parent').find('.contact_success_message').hide();
-				$(el).parents('.form_validation_parent').find('.contact_fail_message').hide();
-			});
-			el.addEventListener( 'wpcf7mailsent', function( event ) {
-				$(el).parents('.form_validation_parent').find('.contact_success_message').slideDown(300);
-			}, false );
-			el.addEventListener( 'wpcf7mailfailed', function( event ) {
-				$(el).find('form').find('.wpcf7-submit').removeClass('disabled');
-				$(el).parents('.form_validation_parent').find('.contact_fail_message').slideDown(300);
-			}, false );
-			el.addEventListener( 'wpcf7spam', function( event ) {
-				$(el).find('form').find('.wpcf7-submit').removeClass('disabled');
-				$(el).parents('.form_validation_parent').find('.contact_fail_message').slideDown(300);
-			}, false );
-			el.addEventListener( 'wpcf7invalid', function( event ) {
-				$(el).find('form').find('.wpcf7-submit').removeClass('disabled');
-				$(el).parents('.form_validation_parent').find('.contact_fail_message').slideDown(300);
-			}, false );
-			}
-		});
-	}
-});
-</script>
 <?php
 get_footer();
