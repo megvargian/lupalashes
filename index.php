@@ -159,13 +159,16 @@ window.addEventListener('DOMContentLoaded', function() {
     <div class="container">
         <div class="section-header">
             <span class="section-subtitle">Our Collection</span>
-            <h2 class="section-title">Featured Products</h2>
+            <h2 class="section-title">Shop Now Our Lashes</h2>
+            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>" class="view-all-link">View all</a>
         </div>
-        <div class="products-grid">
+
+        <!-- Desktop Grid -->
+        <div class="products-grid desktop-products">
             <?php
             $args = array(
                 'post_type' => 'product',
-                'posts_per_page' => 4,
+                'posts_per_page' => 5,
                 'orderby' => 'date',
                 'order' => 'DESC'
             );
@@ -174,19 +177,38 @@ window.addEventListener('DOMContentLoaded', function() {
             if ($products->have_posts()) :
                 while ($products->have_posts()) : $products->the_post();
                     global $product;
+                    $image_id = $product->get_image_id();
+                    $gallery_ids = $product->get_gallery_image_ids();
+                    $hover_image = '';
+                    if (!empty($gallery_ids)) {
+                        $hover_image = wp_get_attachment_image_url($gallery_ids[0], 'medium');
+                    }
             ?>
             <div class="product-card">
-                <div class="product-image">
-                    <?php if (has_post_thumbnail()) : ?>
-                        <?php the_post_thumbnail('medium'); ?>
-                    <?php endif; ?>
-                    <div class="product-overlay">
-                        <a href="<?php the_permalink(); ?>" class="btn btn-light">View Details</a>
+                <div class="product-image-wrapper">
+                    <div class="product-image">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>" class="main-image">
+                            <?php if ($hover_image) : ?>
+                                <img src="<?php echo $hover_image; ?>" alt="<?php the_title(); ?>" class="hover-image">
+                            <?php endif; ?>
+                        <?php endif; ?>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn search-btn" title="Quick View">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="action-btn add-btn" title="Add to Cart">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3><?php the_title(); ?></h3>
-                    <span class="product-price"><?php echo $product->get_price_html(); ?></span>
+                    <p class="product-vendor">Samra Beauty</p>
+                    <h3 class="product-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    <div class="product-price-wrapper">
+                        <span class="product-price"><?php echo $product->get_price_html(); ?></span>
+                    </div>
                 </div>
             </div>
             <?php
@@ -195,11 +217,86 @@ window.addEventListener('DOMContentLoaded', function() {
             endif;
             ?>
         </div>
-        <div class="section-footer">
-            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>" class="btn btn-secondary">View All Products</a>
+
+        <!-- Mobile Swiper -->
+        <div class="products-swiper mobile-products">
+            <div class="swiper products-slider">
+                <div class="swiper-wrapper">
+                    <?php
+                    $products->rewind_posts();
+                    if ($products->have_posts()) :
+                        while ($products->have_posts()) : $products->the_post();
+                            global $product;
+                            $image_id = $product->get_image_id();
+                            $gallery_ids = $product->get_gallery_image_ids();
+                            $hover_image = '';
+                            if (!empty($gallery_ids)) {
+                                $hover_image = wp_get_attachment_image_url($gallery_ids[0], 'medium');
+                            }
+                    ?>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image-wrapper">
+                                <div class="product-image">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>" class="main-image">
+                                    <?php endif; ?>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn search-btn" title="Quick View">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="action-btn add-btn" title="Add to Cart">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <p class="product-vendor">Samra Beauty</p>
+                                <h3 class="product-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <div class="product-price-wrapper">
+                                    <span class="product-price"><?php echo $product->get_price_html(); ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                        endwhile;
+                        wp_reset_postdata();
+                    endif;
+                    ?>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </div>
 </section>
+
+<!-- Initialize Products Slider -->
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth <= 991) {
+        var productsSwiper = new Swiper('.products-slider', {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                }
+            }
+        });
+    }
+});
+</script>
 
 <!-- Testimonials Section -->
 <section class="testimonials-section">
