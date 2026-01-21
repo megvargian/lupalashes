@@ -70,6 +70,15 @@
 
         <script>
         jQuery(document).ready(function($) {
+            // Scroll detection for header
+            $(window).on('scroll', function() {
+                if ($(window).scrollTop() > 50) {
+                    $('.site-header').addClass('scrolled');
+                } else {
+                    $('.site-header').removeClass('scrolled');
+                }
+            });
+
             // Mobile menu toggle
             $('.mobile-menu-toggle').on('click', function() {
                 $(this).toggleClass('active');

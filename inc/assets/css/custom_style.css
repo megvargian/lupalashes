@@ -78,7 +78,7 @@ p {
 
 body {
   color: #000;
-  font-family: "Rutan-Regular";
+  font-family: "Poppins", sans-serif;
   background-color: #fff;
   overflow-x: hidden !important;
 }
@@ -174,15 +174,32 @@ body.hide_scroll {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  box-shadow: none;
   z-index: 1000;
   padding: 0;
   height: 80px;
+  transition: all 0.3s ease;
+}
+.site-header.scrolled {
+  background: #2c2c2c;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  height: 70px;
+}
+.site-header.scrolled .site-logo .logo-text .brand-name,
+.site-header.scrolled .main-navigation .nav-menu li a,
+.site-header.scrolled .header-actions .header-icons .header-icon {
+  color: #fff;
+}
+.site-header.scrolled .main-navigation .nav-menu li.menu-item-has-children::after {
+  border-top-color: #fff;
+}
+.site-header.scrolled .header-actions .mobile-menu-toggle span {
+  background: #fff;
 }
 .site-header .header-container {
   max-width: 1400px;
@@ -204,9 +221,10 @@ body.hide_scroll {
 .site-header .site-logo .logo-text .brand-name {
   font-size: 24px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #fff;
   letter-spacing: 3px;
-  font-family: "Arial", sans-serif;
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s ease;
 }
 .site-header .site-logo img {
   max-height: 40px;
@@ -255,7 +273,7 @@ body.hide_scroll {
 .site-header .main-navigation .nav-menu li a {
   font-size: 14px;
   font-weight: 500;
-  color: #1a1a1a;
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
   letter-spacing: 1px;
@@ -283,7 +301,8 @@ body.hide_scroll {
   height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 4px solid #1a1a1a;
+  border-top: 4px solid #fff;
+  transition: border-color 0.3s ease;
 }
 @media (max-width: 991px) {
   .site-header .main-navigation .nav-menu li.menu-item-has-children::after {
@@ -303,7 +322,7 @@ body.hide_scroll {
 .site-header .header-actions .header-icons .header-icon {
   position: relative;
   font-size: 18px;
-  color: #1a1a1a;
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -343,7 +362,7 @@ body.hide_scroll {
 .site-header .header-actions .mobile-menu-toggle span {
   width: 22px;
   height: 2px;
-  background: #1a1a1a;
+  background: #fff;
   transition: all 0.3s ease;
   border-radius: 1px;
 }

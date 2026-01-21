@@ -122,6 +122,9 @@ function wp_bootstrap_starter_scripts()
     // load bootstrap css
     wp_enqueue_style('wp-bootstrap-starter-bootstrap-css', get_template_directory_uri() . '/inc/assets/css/bootstrap.min.css');
 
+    // Google Fonts - Poppins
+    wp_enqueue_style('google-fonts-poppins', 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap', array(), null);
+
     // fontawesome cdn
     wp_enqueue_style('wp-bootstrap-pro-fontawesome-cdn', get_template_directory_uri() . '/inc/assets/css/font-awsome.css');
     // load bootstrap css
