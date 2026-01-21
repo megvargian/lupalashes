@@ -39,7 +39,7 @@ get_header();
                                 <h1 class="slide-title">EXPERTLY<br>CRAFTED LASHES</h1>
                                 <p class="slide-description">Experience the art of professional lash extension application</p>
                                 <div class="slide-buttons">
-                                    <a href="#" class="btn btn-white">BOOK APPOINTMENT</a>
+                                    <a href="#" class="btn btn-white">SHOP NOW</a>
                                 </div>
                             </div>
                         </div>
@@ -248,17 +248,6 @@ window.addEventListener('DOMContentLoaded', function() {
                     <strong>Jessica Martinez</strong>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="cta-section">
-    <div class="container">
-        <div class="cta-content">
-            <h2>Ready to Transform Your Look?</h2>
-            <p>Book your appointment today and experience the luxury of professional lash extensions.</p>
-            <a href="<?php echo site_url('/contact-us'); ?>" class="btn btn-light">Book Appointment</a>
         </div>
     </div>
 </section>
