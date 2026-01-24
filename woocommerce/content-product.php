@@ -1,15 +1,7 @@
 <?php
 /**
- * The template for displaying product content within loops.
+ * The template for displaying product content within loops - Modern Version
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/content-product.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you (the theme developer).
- * will need to copy the new files to your theme to maintain compatibility. We try to do this
- * as little as possible, but it does happen. When this occurs the version of the template file
- * will be bumped and the readme will list any important changes.
- *
- * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
  * @version 3.6.0
  */
@@ -17,86 +9,115 @@
 defined( 'ABSPATH' ) || exit;
 
 global $product;
-global $counter_products;
-$product_id = $product->get_id();
+
 // Ensure visibility.
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
+
+$product_id = $product->get_id();
+$attachment_ids = $product->get_gallery_image_ids();
+$first_gallery_image = ! empty( $attachment_ids ) ? wp_get_attachment_image_url( $attachment_ids[0], 'woocommerce_thumbnail' ) : '';
 ?>
 
-<div id="product-<?php echo $product_id; ?>" class="cat-single-main-product" <?php wc_product_class( '', $product ); ?>>
-        <?php
-        /**
-         * Hook: woocommerce_before_shop_loop_item.
-         *
-         * @hooked woocommerce_template_loop_product_link_open - 10
-         */
-        //do_action( 'woocommerce_before_shop_loop_item' );
+<div <?php wc_product_class( 'modern-product-card', $product ); ?>>
+	<div class="product-card-inner">
+		<!-- Product Image Section -->
+		<div class="product-image-wrapper">
+			<a href="<?php echo esc_url( $product->get_permalink() ); ?>" class="product-link">
+				<div class="product-image">
+					<?php
+					// Main product image
+					$image_id = $product->get_image_id();
+					if ( $image_id ) {
+						$image_url = wp_get_attachment_image_url( $image_id, 'woocommerce_thumbnail' );
+						echo '<img src="' . esc_url( $image_url ) . '" alt="' . esc_attr( $product->get_name() ) . '" class="main-image">';
+					} else {
+						echo wc_placeholder_img();
+					}
+					
+					// Hover image (first gallery image)
+					if ( $first_gallery_image ) {
+						echo '<img src="' . esc_url( $first_gallery_image ) . '" alt="' . esc_attr( $product->get_name() ) . '" class="hover-image">';
+					}
+					?>
+				</div>
 
-        /**
-         * Hook: woocommerce_before_shop_loop_item_title.
-         *
-         * @hooked woocommerce_show_product_loop_sale_flash - 10
-         * @hooked woocommerce_template_loop_product_thumbnail - 10
-         */
-        //do_action( 'woocommerce_before_shop_loop_item_title' );
+				<!-- Product Badges -->
+				<div class="product-badges">
+					<?php if ( $product->is_on_sale() ) : ?>
+						<span class="badge badge-sale">Sale</span>
+					<?php endif; ?>
+					<?php if ( ! $product->is_in_stock() ) : ?>
+						<span class="badge badge-out-of-stock">Out of Stock</span>
+					<?php endif; ?>
+					<?php if ( $product->is_featured() ) : ?>
+						<span class="badge badge-featured">Featured</span>
+					<?php endif; ?>
+				</div>
+			</a>
 
-        /**
-         * Hook: woocommerce_shop_loop_item_title.
-         *
-         * @hooked woocommerce_template_loop_product_title - 10
-         */
-        //do_action( 'woocommerce_shop_loop_item_title' );
+			<!-- Quick Actions -->
+			<div class="product-quick-actions">
+				<?php
+				// Quick view button
+				echo '<button class="quick-action-btn quick-view-btn" data-product-id="' . esc_attr( $product_id ) . '" title="Quick View">
+						<i class="fas fa-eye"></i>
+					</button>';
 
-        /**
-         * Hook: woocommerce_after_shop_loop_item_title.
-         *
-         * @hooked woocommerce_template_loop_rating - 5
-         * @hooked woocommerce_template_loop_price - 10
-         */
-        // do_action( 'woocommerce_after_shop_loop_item_title' );
+				// Wishlist button (if plugin available)
+				if ( function_exists( 'YITH_WCWL' ) ) {
+					echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
+				}
+				?>
+			</div>
 
-        /**
-         * Hook: woocommerce_after_shop_loop_item.
-         *
-         * @hooked woocommerce_template_loop_product_link_close - 5
-         * @hooked woocommerce_template_loop_add_to_cart - 10
-         */
-        // do_action( 'woocommerce_after_shop_loop_item' );
-        ?>
-        <?php
-        // Open the product link
-        $short_description = $product->get_short_description();
-        $attachment_ids = $product->get_gallery_image_ids();
-        if ($attachment_ids && !empty($attachment_ids)) {
-                $first_image_id = $attachment_ids[0]; // Get the first image ID
-                $first_image_url = wp_get_attachment_image_src($first_image_id, 'full'); // Get the URL of the first image
-        } ?>
-        <a class="w-100 h-100 d-block pb-3 <?php echo $first_image_url ? 'cat-single-product' : '' ?>" href="<?php echo esc_url( $product->get_permalink() ) ?>">
-        <?php
-                $attachment_id = $product->get_image_id(); // Get the product image ID
-                $image_url_mobile = isMob() ? wp_get_attachment_image_src($attachment_id, 'custom-woocommerce-thumbnail') : wp_get_attachment_image_src($attachment_id, 'full');
-                $image_url = wp_get_attachment_image_src($attachment_id, 'full');
-                if ($image_url || $image_url_mobile) {
-                        echo '<img class="d-md-block d-none main-img-product-'.$product_id.' main-thumbnail-img" src="' . esc_url($image_url[0]) . '" alt="' . esc_attr($product->get_name()) . '" width="500" height="500" />';
-                        echo '<img class="d-md-none d-block main-thumbnail-img-mobile" src="' . esc_url($image_url_mobile[0]) . '" alt="' . esc_attr($product->get_name()) . '" width="500" height="500" />';
-                }
-                 // Check if there are gallery images
-                if ($first_image_url) {
-                        echo '<img class="first-gallery-image d-none" src="' . esc_url($first_image_url[0]) . '" alt="First Gallery Image">';
-                }
-                ?>
-                <h2 class="woocommerce-loop-product__title"><?php echo $product -> get_name(); ?></h2>
-                <?php
-                if ( ! empty( $short_description ) ) {
-                        echo '<p class="woocommerce-product-short-description my-0">' . $short_description . '</p>';
-                }
-                echo '<span class="price">' . $product->get_price_html() . '</span>';
-        // Close the product link
-        echo '</a>';
-        // Display the add to cart button
-        // echo $counter_products > 1 ? '' : woocommerce_template_single_add_to_cart();
-        ?>
+			<!-- Add to Cart (appears on hover) -->
+			<div class="product-add-to-cart-hover">
+				<?php
+				woocommerce_template_loop_add_to_cart();
+				?>
+			</div>
+		</div>
+
+		<!-- Product Info Section -->
+		<div class="product-info">
+			<?php
+			/**
+			 * Product category
+			 */
+			$categories = get_the_terms( $product_id, 'product_cat' );
+			if ( $categories && ! is_wp_error( $categories ) ) {
+				$category = array_shift( $categories );
+				echo '<div class="product-category">' . esc_html( $category->name ) . '</div>';
+			}
+			?>
+
+			<!-- Product Title -->
+			<h3 class="product-title">
+				<a href="<?php echo esc_url( $product->get_permalink() ); ?>">
+					<?php echo esc_html( $product->get_name() ); ?>
+				</a>
+			</h3>
+
+			<!-- Product Rating -->
+			<?php if ( $product->get_average_rating() ) : ?>
+				<div class="product-rating">
+					<?php woocommerce_template_loop_rating(); ?>
+				</div>
+			<?php endif; ?>
+
+			<!-- Product Short Description (Optional) -->
+			<?php if ( $product->get_short_description() ) : ?>
+				<div class="product-short-description">
+					<?php echo wp_trim_words( $product->get_short_description(), 10 ); ?>
+				</div>
+			<?php endif; ?>
+
+			<!-- Product Price -->
+			<div class="product-price">
+				<?php woocommerce_template_loop_price(); ?>
+			</div>
+		</div>
+	</div>
 </div>
-<?php
