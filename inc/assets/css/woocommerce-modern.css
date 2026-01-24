@@ -1218,6 +1218,309 @@ body.woocommerce-account {
   }
 }
 
+/* ========================================
+   SEARCH MODAL STYLES
+   ======================================== */
+
+.search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.search-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.search-modal-content {
+  position: relative;
+  max-width: 800px;
+  margin: 80px auto 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-50px);
+  transition: transform 0.3s ease;
+  max-height: calc(100vh - 160px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-modal.active .search-modal-content {
+  transform: translateY(0);
+}
+
+.search-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #f5f5f5;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.search-modal-close:hover {
+  background: #d4a574;
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.search-modal-close i {
+  font-size: 18px;
+}
+
+.search-modal-header {
+  padding: 30px 30px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.search-modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.search-modal-body {
+  padding: 30px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Search Form */
+.product-search-form {
+  margin-bottom: 30px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.product-search-input {
+  width: 100%;
+  padding: 15px 60px 15px 20px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.product-search-input:focus {
+  outline: none;
+  border-color: #d4a574;
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+}
+
+.search-submit-btn {
+  position: absolute;
+  right: 5px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  background: #d4a574;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-submit-btn:hover {
+  background: #c39463;
+  transform: scale(1.05);
+}
+
+/* Search Results */
+.search-results {
+  min-height: 200px;
+}
+
+.search-results-info,
+.search-loading,
+.search-error,
+.no-search-results {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.search-loading i {
+  color: #d4a574;
+  margin-bottom: 15px;
+}
+
+.no-search-results {
+  padding: 60px 20px;
+}
+
+.no-search-results i {
+  font-size: 48px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.no-search-results p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.search-results-count {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.search-result-item {
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: #f9f9f9;
+}
+
+.search-result-link {
+  display: flex;
+  padding: 15px 10px;
+  text-decoration: none;
+  color: inherit;
+  gap: 20px;
+}
+
+.search-result-image {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.search-result-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.search-result-info {
+  flex: 1;
+}
+
+.search-result-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+  transition: color 0.3s ease;
+}
+
+.search-result-link:hover .search-result-title {
+  color: #d4a574;
+}
+
+.search-result-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #d4a574;
+  margin-bottom: 8px;
+}
+
+.search-result-price del {
+  color: #999;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.search-result-excerpt {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Prevent body scroll when modal is open */
+body.search-modal-open {
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-modal-content {
+    margin: 20px;
+    max-height: calc(100vh - 40px);
+    border-radius: 8px;
+  }
+
+  .search-modal-header {
+    padding: 20px 20px 15px;
+  }
+
+  .search-modal-header h2 {
+    font-size: 20px;
+  }
+
+  .search-modal-body {
+    padding: 20px;
+  }
+
+  .search-modal-close {
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .search-result-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .search-result-link {
+    gap: 15px;
+  }
+
+  .search-result-title {
+    font-size: 14px;
+  }
+}
+
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt{
     background-color: #d4a574 !important;
 }

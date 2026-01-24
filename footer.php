@@ -11,6 +11,40 @@
 ?>
     </div><!-- #content -->
 
+    <!-- Search Modal -->
+    <?php if (class_exists('WooCommerce')) : ?>
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-overlay"></div>
+        <div class="search-modal-content">
+            <button class="search-modal-close" id="searchModalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="search-modal-header">
+                <h2>Search Products</h2>
+            </div>
+            <div class="search-modal-body">
+                <form class="product-search-form" role="search">
+                    <div class="search-input-wrapper">
+                        <input type="search"
+                               id="productSearchInput"
+                               class="product-search-input"
+                               placeholder="Search for products..."
+                               autocomplete="off">
+                        <button type="submit" class="search-submit-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="search-results" id="searchResults">
+                    <div class="search-results-info">
+                        <p>Start typing to search products...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
+
     <!-- Quick View Modal -->
     <?php if (class_exists('WooCommerce')) : ?>
     <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">

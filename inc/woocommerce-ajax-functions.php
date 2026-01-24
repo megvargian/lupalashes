@@ -178,3 +178,129 @@ function ajax_quick_view_product() {
 
     wp_send_json_success(array('html' => $html));
 }
+
+// AJAX Product Search
+add_action('wp_ajax_search_products', 'ajax_search_products');
+add_action('wp_ajax_nopriv_search_products', 'ajax_search_products');
+
+function ajax_search_products() {
+    $search_term = isset($_POST['search_term']) ? sanitize_text_field($_POST['search_term']) : '';
+
+    if (empty($search_term) || strlen($search_term) < 2) {
+        wp_send_json_error(array('message' => 'Please enter at least 2 characters'));
+        return;
+    }
+
+    $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => 10,
+        's' => $search_term,
+        'post_status' => 'publish',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'product_visibility',
+                'field' => 'name',
+                'terms' => 'exclude-from-search',
+                'operator' => 'NOT IN',
+            ),
+        ),
+    );
+
+    // Also search in categories and tags
+    $tax_query = array('relation' => 'OR');
+
+    $categories = get_terms(array(
+        'taxonomy' => 'product_cat',
+        'search' => $search_term,
+        'hide_empty' => true,
+    ));
+
+    $tags = get_terms(array(
+        'taxonomy' => 'product_tag',
+        'search' => $search_term,
+        'hide_empty' => true,
+    ));
+
+    if (!empty($categories)) {
+        $tax_query[] = array(
+            'taxonomy' => 'product_cat',
+            'field' => 'term_id',
+            'terms' => wp_list_pluck($categories, 'term_id'),
+        );
+    }
+
+    if (!empty($tags)) {
+        $tax_query[] = array(
+            'taxonomy' => 'product_tag',
+            'field' => 'term_id',
+            'terms' => wp_list_pluck($tags, 'term_id'),
+        );
+    }
+
+    if (count($tax_query) > 1) {
+        $args['tax_query'][] = $tax_query;
+    }
+
+    $query = new WP_Query($args);
+
+    if (!$query->have_posts()) {
+        ob_start();
+        ?>
+        <div class="no-search-results">
+            <i class="fas fa-search"></i>
+            <p>No products found for "<?php echo esc_html($search_term); ?>"</p>
+            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>" class="btn btn-primary">
+                View All Products
+            </a>
+        </div>
+        <?php
+        $html = ob_get_clean();
+        wp_send_json_success(array('html' => $html, 'count' => 0));
+        return;
+    }
+
+    ob_start();
+    ?>
+    <div class="search-results-list">
+        <div class="search-results-count">
+            Found <?php echo $query->found_posts; ?> product(s) for "<?php echo esc_html($search_term); ?>"
+        </div>
+        <?php
+        while ($query->have_posts()) {
+            $query->the_post();
+            global $product;
+            ?>
+            <div class="search-result-item">
+                <a href="<?php echo esc_url(get_permalink()); ?>" class="search-result-link">
+                    <div class="search-result-image">
+                        <?php
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail('thumbnail');
+                        } else {
+                            echo '<img src="' . wc_placeholder_img_src() . '" alt="Placeholder">';
+                        }
+                        ?>
+                    </div>
+                    <div class="search-result-info">
+                        <h4 class="search-result-title"><?php echo get_the_title(); ?></h4>
+                        <div class="search-result-price">
+                            <?php echo $product->get_price_html(); ?>
+                        </div>
+                        <?php if ($product->get_short_description()) : ?>
+                            <p class="search-result-excerpt">
+                                <?php echo wp_trim_words($product->get_short_description(), 15); ?>
+                            </p>
+                        <?php endif; ?>
+                    </div>
+                </a>
+            </div>
+            <?php
+        }
+        wp_reset_postdata();
+        ?>
+    </div>
+    <?php
+    $html = ob_get_clean();
+
+    wp_send_json_success(array('html' => $html, 'count' => $query->found_posts));
+}

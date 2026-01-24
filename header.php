@@ -46,12 +46,9 @@
 
                 <div class="header-actions">
                     <div class="header-icons">
-                        <a href="#" class="header-icon search-icon">
+                        <button class="header-icon search-icon" id="searchToggle">
                             <i class="fas fa-search"></i>
-                        </a>
-                        <a href="#" class="header-icon user-icon">
-                            <i class="fas fa-user"></i>
-                        </a>
+                        </button>
                         <?php if (class_exists('WooCommerce')) : ?>
                             <a href="<?php echo wc_get_cart_url(); ?>" class="header-icon cart-icon">
                                 <i class="fas fa-shopping-bag"></i>

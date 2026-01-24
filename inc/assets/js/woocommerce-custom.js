@@ -3,10 +3,90 @@
  * - Dynamic Cart Count Update
  * - Quick View Modal
  * - AJAX Add to Cart
+ * - Product Search Modal
  */
 
 (function($) {
     'use strict';
+
+    // ===== SEARCH MODAL =====
+    var searchTimeout;
+
+    // Open search modal
+    $('#searchToggle').on('click', function(e) {
+        e.preventDefault();
+        $('#searchModal').addClass('active');
+        $('body').addClass('search-modal-open');
+        setTimeout(function() {
+            $('#productSearchInput').focus();
+        }, 300);
+    });
+
+    // Close search modal
+    $('#searchModalClose, .search-modal-overlay').on('click', function() {
+        $('#searchModal').removeClass('active');
+        $('body').removeClass('search-modal-open');
+        $('#productSearchInput').val('');
+        $('#searchResults').html('<div class="search-results-info"><p>Start typing to search products...</p></div>');
+    });
+
+    // Close on Escape key
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape' && $('#searchModal').hasClass('active')) {
+            $('#searchModalClose').trigger('click');
+        }
+    });
+
+    // Live search
+    $('#productSearchInput').on('input', function() {
+        var searchTerm = $(this).val().trim();
+
+        clearTimeout(searchTimeout);
+
+        if (searchTerm.length < 2) {
+            $('#searchResults').html('<div class="search-results-info"><p>Please enter at least 2 characters...</p></div>');
+            return;
+        }
+
+        // Show loading
+        $('#searchResults').html('<div class="search-loading"><i class="fas fa-spinner fa-spin fa-2x"></i><p>Searching...</p></div>');
+
+        searchTimeout = setTimeout(function() {
+            performSearch(searchTerm);
+        }, 500);
+    });
+
+    // Search form submit
+    $('.product-search-form').on('submit', function(e) {
+        e.preventDefault();
+        var searchTerm = $('#productSearchInput').val().trim();
+        if (searchTerm.length >= 2) {
+            clearTimeout(searchTimeout);
+            performSearch(searchTerm);
+        }
+    });
+
+    // Perform AJAX search
+    function performSearch(searchTerm) {
+        $.ajax({
+            url: woocommerce_params.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'search_products',
+                search_term: searchTerm
+            },
+            success: function(response) {
+                if (response.success) {
+                    $('#searchResults').html(response.data.html);
+                } else {
+                    $('#searchResults').html('<div class="search-error"><p>' + response.data.message + '</p></div>');
+                }
+            },
+            error: function() {
+                $('#searchResults').html('<div class="search-error"><p>Error performing search. Please try again.</p></div>');
+            }
+        });
+    }
 
     // Update cart count via AJAX
     function updateCartCount() {
