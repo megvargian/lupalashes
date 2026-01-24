@@ -3,6 +3,76 @@
    ======================================== */
 
 /* ========================================
+   HEADER STYLING FOR WOOCOMMERCE PAGES
+   ======================================== */
+
+/* Header background on WooCommerce pages */
+.woocommerce .site-header,
+.woocommerce-page .site-header,
+.single-product .site-header,
+.woocommerce-cart .site-header,
+.woocommerce-checkout .site-header,
+.woocommerce-account .site-header {
+  background: #d4a574 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.woocommerce .site-header .site-logo .logo-text .brand-name,
+.woocommerce-page .site-header .site-logo .logo-text .brand-name,
+.single-product .site-header .site-logo .logo-text .brand-name,
+.woocommerce-cart .site-header .site-logo .logo-text .brand-name,
+.woocommerce-checkout .site-header .site-logo .logo-text .brand-name,
+.woocommerce-account .site-header .site-logo .logo-text .brand-name {
+  color: #fff;
+}
+
+.woocommerce .site-header .main-navigation .nav-menu li a,
+.woocommerce-page .site-header .main-navigation .nav-menu li a,
+.single-product .site-header .main-navigation .nav-menu li a,
+.woocommerce-cart .site-header .main-navigation .nav-menu li a,
+.woocommerce-checkout .site-header .main-navigation .nav-menu li a,
+.woocommerce-account .site-header .main-navigation .nav-menu li a {
+  color: #fff;
+}
+
+.woocommerce .site-header .header-actions .header-icons .header-icon,
+.woocommerce-page .site-header .header-actions .header-icons .header-icon,
+.single-product .site-header .header-actions .header-icons .header-icon,
+.woocommerce-cart .site-header .header-actions .header-icons .header-icon,
+.woocommerce-checkout .site-header .header-actions .header-icons .header-icon,
+.woocommerce-account .site-header .header-actions .header-icons .header-icon {
+  color: #fff;
+}
+
+.woocommerce .site-header .main-navigation .nav-menu li.menu-item-has-children::after,
+.woocommerce-page .site-header .main-navigation .nav-menu li.menu-item-has-children::after,
+.single-product .site-header .main-navigation .nav-menu li.menu-item-has-children::after,
+.woocommerce-cart .site-header .main-navigation .nav-menu li.menu-item-has-children::after,
+.woocommerce-checkout .site-header .main-navigation .nav-menu li.menu-item-has-children::after,
+.woocommerce-account .site-header .main-navigation .nav-menu li.menu-item-has-children::after {
+  border-top-color: #fff;
+}
+
+.woocommerce .site-header .header-actions .mobile-menu-toggle span,
+.woocommerce-page .site-header .header-actions .mobile-menu-toggle span,
+.single-product .site-header .header-actions .mobile-menu-toggle span,
+.woocommerce-cart .site-header .header-actions .mobile-menu-toggle span,
+.woocommerce-checkout .site-header .header-actions .mobile-menu-toggle span,
+.woocommerce-account .site-header .header-actions .mobile-menu-toggle span {
+  background: #fff;
+}
+
+/* When scrolled on WooCommerce pages - keep primary color */
+.woocommerce .site-header.scrolled,
+.woocommerce-page .site-header.scrolled,
+.single-product .site-header.scrolled,
+.woocommerce-cart .site-header.scrolled,
+.woocommerce-checkout .site-header.scrolled,
+.woocommerce-account .site-header.scrolled {
+  background: #d4a574 !important;
+}
+
+/* ========================================
    SHOP PAGE STYLES
    ======================================== */
 
