@@ -195,10 +195,10 @@ window.addEventListener('DOMContentLoaded', function() {
                         <?php endif; ?>
                     </div>
                     <div class="product-actions">
-                        <button class="action-btn search-btn" title="Quick View">
+                        <button class="action-btn search-btn quick-view-btn" data-product-id="<?php echo get_the_ID(); ?>" title="Quick View">
                             <i class="fas fa-search"></i>
                         </button>
-                        <button class="action-btn add-btn" title="Add to Cart">
+                        <button class="action-btn add-btn ajax-add-to-cart" data-product-id="<?php echo get_the_ID(); ?>" title="Add to Cart">
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>
@@ -243,10 +243,10 @@ window.addEventListener('DOMContentLoaded', function() {
                                     <?php endif; ?>
                                 </div>
                                 <div class="product-actions">
-                                    <button class="action-btn search-btn" title="Quick View">
+                                    <button class="action-btn search-btn quick-view-btn" data-product-id="<?php echo get_the_ID(); ?>" title="Quick View">
                                         <i class="fas fa-search"></i>
                                     </button>
-                                    <button class="action-btn add-btn" title="Add to Cart">
+                                    <button class="action-btn add-btn ajax-add-to-cart" data-product-id="<?php echo get_the_ID(); ?>" title="Add to Cart">
                                         <i class="fas fa-plus"></i>
                                     </button>
                                 </div>
