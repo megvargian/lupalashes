@@ -50,9 +50,9 @@
     <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header justify-content-between">
                     <h5 class="modal-title" id="quickViewModalLabel">Quick View</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="border:none; background:none;">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
