@@ -1388,7 +1388,12 @@ body.menu-open {
   margin: 0;
 }
 #searchToggle{
-background-color: transparent !important;
-border: none !important;
-box-shadow: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.wc-block-components-checkout-place-order-button{
+  border: 1px solid hsla(0,0%,7%,.11) !important;
+  background-color: transparent !important;
 }
