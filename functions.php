@@ -231,3 +231,10 @@ function my_acf_init_block_types()
     }
 }
 
+// Remove default WooCommerce related products output (we have custom "You May Also Like" section)
+function remove_woocommerce_default_related_products() {
+    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+}
+add_action( 'wp', 'remove_woocommerce_default_related_products' );
+
+

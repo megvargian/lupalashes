@@ -72,13 +72,34 @@
   background: #d4a574 !important;
 }
 
+/* Add padding to body on WooCommerce pages to prevent content hiding under fixed header */
+body.woocommerce,
+body.woocommerce-page,
+body.single-product,
+body.woocommerce-cart,
+body.woocommerce-checkout,
+body.woocommerce-account {
+  padding-top: 80px;
+}
+
+@media (max-width: 991px) {
+  body.woocommerce,
+  body.woocommerce-page,
+  body.single-product,
+  body.woocommerce-cart,
+  body.woocommerce-checkout,
+  body.woocommerce-account {
+    padding-top: 80px;
+  }
+}
+
 /* ========================================
    SHOP PAGE STYLES
    ======================================== */
 
 /* Shop Page Header */
 .shop-page-header {
-  padding: 150px 20px 60px;
+  padding: 80px 20px 60px;
   background: linear-gradient(135deg, #d4a574 0%, #c39463 100%);
   color: #fff;
   text-align: center;
@@ -485,7 +506,7 @@
    ======================================== */
 
 .single-product-wrapper {
-  padding: 120px 0 60px;
+  padding: 60px 0 60px;
   background: #fff;
 }
 
@@ -861,6 +882,27 @@
   color: #1a1a1a;
   margin-bottom: 40px;
   text-align: center;
+}
+
+.related-products-section .row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.related-products-section .row > [class*="col-"] {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.related-products-section .modern-product-card {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .related-products-section .section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
 }
 
 /* Responsive Adjustments */
