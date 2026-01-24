@@ -24,23 +24,13 @@ if ( post_password_required() ) {
 ?>
 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'modern-single-product', $product ); ?>>
-	
+
 	<!-- Product Main Section -->
 	<div class="single-product-main">
 		<div class="row">
 			<!-- Product Gallery - Left Side -->
 			<div class="col-lg-6 col-md-6 col-12 product-gallery-col">
 				<div class="product-gallery-wrapper">
-					<?php
-					/**
-					 * Hook: woocommerce_before_single_product_summary.
-					 *
-					 * @hooked woocommerce_show_product_sale_flash - 10
-					 * @hooked woocommerce_show_product_images - 20
-					 */
-					do_action( 'woocommerce_before_single_product_summary' );
-					?>
-					
 					<!-- Custom Gallery for Better UX -->
 					<div class="custom-product-gallery">
 						<!-- Main Image -->
@@ -52,7 +42,7 @@ if ( post_password_required() ) {
 								echo '<img src="' . esc_url( $main_image_url ) . '" alt="' . esc_attr( $product->get_name() ) . '" class="main-product-image" id="mainProductImage">';
 							}
 							?>
-							
+
 							<!-- Product Badges -->
 							<div class="single-product-badges">
 								<?php if ( $product->is_on_sale() ) : ?>
@@ -75,7 +65,7 @@ if ( post_password_required() ) {
 						<div class="gallery-thumbnails">
 							<div class="thumbnails-wrapper">
 								<!-- Main Image Thumbnail -->
-								<?php if ( $image_id ) : 
+								<?php if ( $image_id ) :
 									$thumb_url = wp_get_attachment_image_url( $image_id, 'thumbnail' );
 									$full_url = wp_get_attachment_image_url( $image_id, 'full' );
 								?>
@@ -85,7 +75,7 @@ if ( post_password_required() ) {
 								<?php endif; ?>
 
 								<!-- Gallery Thumbnails -->
-								<?php foreach ( $attachment_ids as $attachment_id ) : 
+								<?php foreach ( $attachment_ids as $attachment_id ) :
 									$thumb_url = wp_get_attachment_image_url( $attachment_id, 'thumbnail' );
 									$full_url = wp_get_attachment_image_url( $attachment_id, 'full' );
 								?>
@@ -130,24 +120,6 @@ if ( post_password_required() ) {
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Product Details Tabs -->
-	<div class="product-details-tabs">
-		<div class="row">
-			<div class="col-12">
-				<?php
-				/**
-				 * Hook: woocommerce_after_single_product_summary.
-				 *
-				 * @hooked woocommerce_output_product_data_tabs - 10
-				 * @hooked woocommerce_upsell_display - 15
-				 * @hooked woocommerce_output_related_products - 20
-				 */
-				do_action( 'woocommerce_after_single_product_summary' );
-				?>
 			</div>
 		</div>
 	</div>
