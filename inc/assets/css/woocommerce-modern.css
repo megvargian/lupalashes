@@ -352,7 +352,7 @@ body.woocommerce-account {
 .product-add-to-cart-hover .added_to_cart {
   width: 100%;
   padding: 12px 20px;
-  background: #2c2c2c;
+  background: #d4a574;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -368,7 +368,7 @@ body.woocommerce-account {
 
 .product-add-to-cart-hover .button:hover,
 .product-add-to-cart-hover .added_to_cart:hover {
-  background: #d4a574;
+  background: #c39463;
 }
 
 /* Product Info */
@@ -425,7 +425,7 @@ body.woocommerce-account {
 .modern-product-card .product-price {
   font-size: 18px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #d4a574;
   margin-top: auto;
 }
 
@@ -438,7 +438,7 @@ body.woocommerce-account {
 
 .modern-product-card .product-price ins {
   text-decoration: none;
-  color: #e74c3c;
+  color: #d4a574;
 }
 
 /* Shop Pagination */
@@ -655,7 +655,7 @@ body.woocommerce-account {
 .price {
   font-size: 28px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #d4a574;
   margin-bottom: 20px;
   display: block;
 }
@@ -669,7 +669,7 @@ body.woocommerce-account {
 
 .price ins {
   text-decoration: none;
-  color: #e74c3c;
+  color: #d4a574;
 }
 
 /* Product Rating */
@@ -709,12 +709,13 @@ body.woocommerce-account {
 }
 
 .cart .quantity {
-  display: inline-block;
-  margin-right: 15px;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 .cart .quantity input.qty {
-  width: 80px;
+  width: 100%;
   padding: 12px 15px;
   border: 2px solid #ddd;
   border-radius: 5px;
@@ -725,7 +726,7 @@ body.woocommerce-account {
 
 .cart .single_add_to_cart_button {
   padding: 15px 40px;
-  background: #2c2c2c;
+  background: #d4a574;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -735,10 +736,13 @@ body.woocommerce-account {
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  margin-top: 15px;
 }
 
 .cart .single_add_to_cart_button:hover {
-  background: #d4a574;
+  background: #c39463;
 }
 
 .cart .single_add_to_cart_button:disabled {
@@ -974,4 +978,242 @@ body.woocommerce-account {
   background: #d1ecf1;
   border-color: #0c5460;
   color: #0c5460;
+}
+
+/* ========================================
+   CART COUNT ANIMATION & NOTIFICATION
+   ======================================== */
+
+/* Cart icon animation */
+.cart-icon.cart-updated {
+  animation: cartBounce 0.6s ease;
+}
+
+@keyframes cartBounce {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(0.9); }
+  75% { transform: scale(1.1); }
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #e74c3c;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Cart notification popup */
+.cart-notification {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: #28a745;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  opacity: 0;
+  transform: translateX(400px);
+  transition: all 0.3s ease;
+  max-width: 300px;
+}
+
+.cart-notification.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cart-notification::before {
+  content: '\f00c';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+/* ========================================
+   QUICK VIEW MODAL STYLES
+   ======================================== */
+
+#quickViewModal .modal-dialog {
+  max-width: 900px;
+}
+
+#quickViewModal .modal-header {
+  border-bottom: 1px solid #eee;
+  padding: 20px 30px;
+}
+
+#quickViewModal .modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+#quickViewModal .modal-body {
+  padding: 30px;
+}
+
+#quickViewModal .close {
+  font-size: 28px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+#quickViewModal .close:hover {
+  opacity: 1;
+}
+
+/* Quick View Product */
+.quick-view-product .quick-view-images {
+  position: relative;
+}
+
+.quick-view-product .quick-view-main-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.quick-view-product .quick-view-thumbnails {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.quick-view-product .quick-view-thumbnail {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.quick-view-product .quick-view-thumbnail:hover,
+.quick-view-product .quick-view-thumbnail.active {
+  border-color: #d4a574;
+}
+
+.quick-view-product .product-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.quick-view-product .product-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.quick-view-product .product-price del {
+  color: #999;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.quick-view-product .product-price ins {
+  text-decoration: none;
+  color: #e74c3c;
+}
+
+.quick-view-product .product-short-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.quick-view-product .quantity-selector label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.quick-view-product .product-meta {
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #666;
+}
+
+.quick-view-product .product-meta a {
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.quick-view-product .product-meta a:hover {
+  color: #d4a574;
+}
+
+.quick-view-product .out-of-stock {
+  color: #e74c3c;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* AJAX Add to Cart button states */
+.ajax-add-to-cart {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.ajax-add-to-cart.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.ajax-add-to-cart.added {
+  background: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+/* Loading spinner */
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 768px) {
+  #quickViewModal .modal-dialog {
+    margin: 10px;
+  }
+
+  #quickViewModal .modal-body {
+    padding: 20px;
+  }
+
+  .quick-view-product .product-title {
+    font-size: 20px;
+  }
+
+  .quick-view-product .product-price {
+    font-size: 20px;
+  }
+
+  .cart-notification {
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
 }

@@ -35,7 +35,7 @@ $first_gallery_image = ! empty( $attachment_ids ) ? wp_get_attachment_image_url(
 					} else {
 						echo wc_placeholder_img();
 					}
-					
+
 					// Hover image (first gallery image)
 					if ( $first_gallery_image ) {
 						echo '<img src="' . esc_url( $first_gallery_image ) . '" alt="' . esc_attr( $product->get_name() ) . '" class="hover-image">';
@@ -65,6 +65,13 @@ $first_gallery_image = ! empty( $attachment_ids ) ? wp_get_attachment_image_url(
 						<i class="fas fa-eye"></i>
 					</button>';
 
+				// Add to cart button
+				if ( $product->is_type( 'simple' ) && $product->is_purchasable() && $product->is_in_stock() ) {
+					echo '<button class="quick-action-btn ajax-add-to-cart" data-product-id="' . esc_attr( $product_id ) . '" title="Add to Cart">
+							<i class="fas fa-plus"></i>
+						</button>';
+				}
+
 				// Wishlist button (if plugin available)
 				if ( function_exists( 'YITH_WCWL' ) ) {
 					echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
@@ -75,7 +82,11 @@ $first_gallery_image = ! empty( $attachment_ids ) ? wp_get_attachment_image_url(
 			<!-- Add to Cart (appears on hover) -->
 			<div class="product-add-to-cart-hover">
 				<?php
-				woocommerce_template_loop_add_to_cart();
+				if ( $product->is_type( 'simple' ) && $product->is_purchasable() && $product->is_in_stock() ) {
+					echo '<button class="button ajax-add-to-cart" data-product-id="' . esc_attr( $product_id ) . '">Add to Cart</button>';
+				} else {
+					woocommerce_template_loop_add_to_cart();
+				}
 				?>
 			</div>
 		</div>
