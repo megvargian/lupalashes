@@ -800,6 +800,9 @@ body.menu-open {
   .products-section .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .desktop-products {
+    display: none;
+  }
 }
 .products-section .product-card {
   background: #fff;
