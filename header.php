@@ -36,7 +36,7 @@
                 <nav class="main-navigation">
                     <ul class="nav-menu">
                         <li><a href="<?php echo home_url('/'); ?>">HOME</a></li>
-                        <li class="menu-item-has-children">
+                        <li>
                             <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>">SHOP</a>
                         </li>
                         <li><a href="<?php echo site_url('/about-us'); ?>">ABOUT</a></li>

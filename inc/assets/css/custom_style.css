@@ -186,7 +186,7 @@ body.hide_scroll {
   transition: all 0.3s ease;
 }
 .site-header.scrolled {
-  background: #2c2c2c;
+  background: #d4a574;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   height: 70px;
 }
