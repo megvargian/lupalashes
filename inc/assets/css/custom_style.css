@@ -238,15 +238,16 @@ body.hide_scroll {
 @media (max-width: 991px) {
   .site-header .main-navigation {
     position: fixed;
-    top: 80px;
+    top: 0;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 100vh;
     background: #fff;
     transition: left 0.3s ease;
     z-index: 999;
-    padding: 40px 20px;
+    padding: 80px 20px 40px 20px;
     transform: none;
+    overflow-y: auto;
   }
   .site-header .main-navigation.active {
     left: 0;
@@ -286,6 +287,7 @@ body.hide_scroll {
     padding: 20px 0;
     font-size: 16px;
     border-bottom: 1px solid #eee;
+    color: #000;
   }
 }
 .site-header .main-navigation .nav-menu li a:hover {
@@ -366,8 +368,11 @@ body.hide_scroll {
   transition: all 0.3s ease;
   border-radius: 1px;
 }
+.site-header .header-actions .mobile-menu-toggle.active span {
+  background: #000;
+}
 .site-header .header-actions .mobile-menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(3px, 3px);
 }
 .site-header .header-actions .mobile-menu-toggle.active span:nth-child(2) {
   opacity: 0;
@@ -377,7 +382,9 @@ body.hide_scroll {
 }
 
 body.menu-open {
-  overflow: hidden;
+  overflow: hidden !important;
+  position: fixed;
+  width: 100%;
 }
 
 .hero-slider {
