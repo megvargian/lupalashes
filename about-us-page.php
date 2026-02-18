@@ -9,7 +9,7 @@ get_header();
 <section class="page-header">
     <div class="container">
         <h1 class="page-title">About Us</h1>
-        <p class="page-subtitle">Discover the story behind Lupalashes</p>
+        <p class="page-subtitle">Unleash your inner She-Wolf with LUPA Lashes</p>
     </div>
 </section>
 
@@ -24,9 +24,9 @@ get_header();
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="about-text">
-                    <h2 class="section-heading">Our Story</h2>
-                    <p>Founded with a passion for enhancing natural beauty, Lupalashes has become a trusted name in premium lash extensions and products. Our journey began with a simple belief: every woman deserves to feel confident and beautiful.</p>
-                    <p>We specialize in creating luxurious, natural-looking lash extensions that enhance your eyes while maintaining the health of your natural lashes. Our expert team is dedicated to providing exceptional service and results that exceed expectations.</p>
+                    <h2 class="section-heading">Why LUPA?</h2>
+                    <p>In ancient lore, the Lupa (She-Wolf) was a symbol of power and protection. We created LUPA Lashes for the woman who isn't afraid to be seen. Whether you're looking for a soft, natural flutter or a dark, savage volume, our lashes are crafted to mirror the intensity and beauty of the She-Wolf.</p>
+                    <p>Every woman has an inner strength that deserves to be celebrated. Our lashes don't just enhance your eyes - they unleash the fierce, confident spirit within you. Like the legendary She-Wolf, you are powerful, protective, and beautifully untamed.</p>
                 </div>
             </div>
         </div>
@@ -40,8 +40,8 @@ get_header();
             <div class="col-lg-6 col-md-12">
                 <div class="about-text">
                     <h2 class="section-heading">Our Mission</h2>
-                    <p>At Lupalashes, our mission is to empower women through beauty. We believe that quality lash extensions should be accessible to everyone, and we're committed to providing products and services that are both luxurious and safe.</p>
-                    <p>We use only the highest quality materials, ensuring that every lash extension is comfortable, long-lasting, and beautiful. Our team of certified technicians undergoes continuous training to stay at the forefront of lash artistry.</p>
+                    <p>At LUPA Lashes, our mission is to empower the She-Wolf in every woman. We believe that true beauty comes from embracing your power and never being afraid to be seen. Our lashes are more than accessories - they're symbols of strength and confidence.</p>
+                    <p>We use only the highest quality, cruelty-free materials, ensuring that every lash is both luxurious and ethically made. Our faux mink lashes, cashmere silk extensions, and latex-free adhesives are crafted for the woman who demands excellence without compromise.</p>
                 </div>
             </div>
         </div>
@@ -52,17 +52,17 @@ get_header();
 <section class="values-section">
     <div class="container">
         <div class="section-header text-center">
-            <h2 class="section-title">Our Values</h2>
+            <h2 class="section-title">The LUPA Values</h2>
             <p class="section-description">What makes us different</p>
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="value-card">
                     <div class="value-icon">
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-paw"></i>
                     </div>
-                    <h3>Quality First</h3>
-                    <p>We never compromise on the quality of our products or services. Every lash extension is crafted with precision and care.</p>
+                    <h3>Fierce Quality</h3>
+                    <p>Like the She-Wolf, we never compromise. Every lash is crafted with precision and dedication to excellence that matches your inner strength.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
@@ -70,8 +70,8 @@ get_header();
                     <div class="value-icon">
                         <i class="fas fa-leaf"></i>
                     </div>
-                    <h3>Natural Beauty</h3>
-                    <p>We enhance your natural features rather than masking them, creating looks that are both stunning and authentic.</p>
+                    <h3>Cruelty-Free Beauty</h3>
+                    <p>We protect what we love. All our products are cruelty-free and latex-free, ensuring beauty without harm.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
@@ -79,17 +79,17 @@ get_header();
                     <div class="value-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Safety & Health</h3>
-                    <p>Your safety is our priority. We use hypoallergenic products and maintain the highest hygiene standards.</p>
+                    <h3>Protection & Safety</h3>
+                    <p>The She-Wolf protects her pack. We prioritize your safety with hypoallergenic products and the highest hygiene standards.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="value-card">
                     <div class="value-icon">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-crown"></i>
                     </div>
-                    <h3>Customer Care</h3>
-                    <p>Our clients are at the heart of everything we do. We're dedicated to providing exceptional service and support.</p>
+                    <h3>Empowerment</h3>
+                    <p>Every woman deserves to feel powerful and beautiful. We're here to help you unleash your inner She-Wolf with confidence.</p>
                 </div>
             </div>
         </div>
