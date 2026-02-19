@@ -160,8 +160,8 @@
 
     <style>
     .site-footer {
-        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-        color: #ecf0f1;
+        background: linear-gradient(135deg, #d4a574 0%, #c39463 100%);
+        color: #fff;
         position: relative;
         z-index: 1;
     }
@@ -184,13 +184,14 @@
     .footer-brand .footer-logo {
         font-size: 28px;
         font-weight: bold;
-        color: #e74c3c;
+        color: #fff;
         margin-bottom: 20px;
         letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
     .footer-description {
-        color: #bdc3c7;
+        color: rgba(255, 255, 255, 0.9);
         line-height: 1.6;
         margin-bottom: 25px;
         font-size: 15px;
@@ -207,24 +208,24 @@
         justify-content: center;
         width: 40px;
         height: 40px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.2);
         border-radius: 50%;
-        color: #ecf0f1;
+        color: #fff;
         text-decoration: none;
         transition: all 0.3s ease;
     }
 
     .social-link:hover {
-        background: #e74c3c;
+        background: rgba(255, 255, 255, 0.3);
         color: #fff;
         transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 
     .footer-title {
         font-size: 18px;
         font-weight: 600;
-        color: #ecf0f1;
+        color: #fff;
         margin-bottom: 25px;
         position: relative;
     }
@@ -236,7 +237,7 @@
         left: 0;
         width: 30px;
         height: 2px;
-        background: #e74c3c;
+        background: rgba(255, 255, 255, 0.8);
     }
 
     .footer-menu {
@@ -250,40 +251,41 @@
     }
 
     .footer-menu a {
-        color: #bdc3c7;
+        color: rgba(255, 255, 255, 0.8);
         text-decoration: none;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease;
         font-size: 15px;
     }
 
     .footer-menu a:hover {
-        color: #e74c3c;
+        color: #fff;
         padding-left: 5px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
 
     .footer-contact .contact-item {
         display: flex;
         align-items: flex-start;
         margin-bottom: 20px;
-        color: #bdc3c7;
+        color: rgba(255, 255, 255, 0.8);
     }
 
     .footer-contact .contact-item i {
         margin-right: 15px;
         margin-top: 3px;
-        color: #e74c3c;
+        color: #fff;
         width: 16px;
     }
 
     .footer-bottom {
         background: rgba(0, 0, 0, 0.2);
         padding: 20px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .copyright {
         margin: 0;
-        color: #bdc3c7;
+        color: rgba(255, 255, 255, 0.8);
         font-size: 14px;
     }
 
@@ -292,19 +294,20 @@
     }
 
     .footer-legal a {
-        color: #bdc3c7;
+        color: rgba(255, 255, 255, 0.8);
         text-decoration: none;
         font-size: 14px;
         transition: color 0.3s ease;
     }
 
     .footer-legal a:hover {
-        color: #e74c3c;
+        color: #fff;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
 
     .footer-legal .separator {
         margin: 0 15px;
-        color: #7f8c8d;
+        color: rgba(255, 255, 255, 0.6);
     }
 
     @media (max-width: 768px) {
