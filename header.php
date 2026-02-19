@@ -40,6 +40,7 @@
                             <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>">SHOP</a>
                         </li>
                         <li><a href="<?php echo site_url('/about-us'); ?>">ABOUT</a></li>
+                        <li><a href="<?php echo site_url('/faq'); ?>">FAQ</a></li>
                         <li><a href="<?php echo site_url('/contact-us'); ?>">CONTACT</a></li>
                     </ul>
                 </nav>
