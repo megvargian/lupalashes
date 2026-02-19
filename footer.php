@@ -109,8 +109,8 @@
                                 <li><a href="<?php echo wc_get_page_permalink('myaccount'); ?>">My Account</a></li>
                                 <li><a href="<?php echo wc_get_page_permalink('cart'); ?>">Shopping Cart</a></li>
                                 <li><a href="<?php echo wc_get_page_permalink('checkout'); ?>">Checkout</a></li>
-                                <li><a href="#">Shipping Info</a></li>
-                                <li><a href="#">Returns & Exchanges</a></li>
+                                <li><a href="<?php echo site_url('/terms-conditions'); ?>">Shipping Info</a></li>
+                                <li><a href="<?php echo site_url('/terms-conditions'); ?>">Returns & Exchanges</a></li>
                             </ul>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
-                                <span>info@lupalashes.com</span>
+                                <span><a href="mailto:info@lupalashes.com">info@lupalashes.com</a></span>
                             </div>
                         </div>
                     </div>
