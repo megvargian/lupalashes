@@ -1620,3 +1620,15 @@ body.menu-open .site-header .header-icons {
     padding: 25px;
   }
 }
+.shop-toolbar .woocommerce-ordering select {
+  margin-bottom: 0 !important;
+}
+.woocommerce-result-count{
+  margin-right: 1rem !important;
+  margin-bottom: 0 !important;
+}
+.toolbar-right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
