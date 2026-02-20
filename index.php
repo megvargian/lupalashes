@@ -103,12 +103,12 @@ window.addEventListener('DOMContentLoaded', function() {
 <!-- Categories Section -->
 <section class="categories-section">
     <div class="container">
-        <div class="section-header animate-on-scroll fade-up">
+        <div class="section-header">
             <h2 class="section-title">Shop by Category</h2>
             <p class="section-subtitle">Discover our premium lash collections</p>
         </div>
-        <div class="categories-grid stagger-container">
-            <div class="category-item animate-on-scroll scale-up">
+        <div class="categories-grid">
+            <div class="category-item">
                 <div class="category-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/extensions-lashes.jpg" alt="Extensions Lashes">
                     <div class="category-overlay">
@@ -121,7 +121,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="category-item animate-on-scroll scale-up">
+            <div class="category-item">
                 <div class="category-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/faux-mink.jpg" alt="Faux Mink">
                     <div class="category-overlay">
@@ -134,7 +134,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="category-item animate-on-scroll scale-up">
+            <div class="category-item">
                 <div class="category-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/real-mink.jpg" alt="Real Mink">
                     <div class="category-overlay">
@@ -147,7 +147,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="category-item animate-on-scroll scale-up">
+            <div class="category-item">
                 <div class="category-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/gift-sets.jpg" alt="Gift Sets">
                     <div class="category-overlay">
@@ -160,7 +160,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="category-item animate-on-scroll scale-up">
+            <div class="category-item">
                 <div class="category-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/tools.jpg" alt="Tools">
                     <div class="category-overlay">
@@ -173,7 +173,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="category-item animate-on-scroll scale-up">
+            <div class="category-item">
                 <div class="category-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/glue.jpg" alt="Glue">
                     <div class="category-overlay">
