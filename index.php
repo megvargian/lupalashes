@@ -103,58 +103,84 @@ window.addEventListener('DOMContentLoaded', function() {
 <!-- Categories Section -->
 <section class="categories-section">
     <div class="container">
-        <div class="section-header">
+        <div class="section-header animate-on-scroll fade-up">
             <h2 class="section-title">Shop by Category</h2>
             <p class="section-subtitle">Discover our premium lash collections</p>
         </div>
-        <div class="categories-grid">
-            <div class="category-item">
+        <div class="categories-grid stagger-container">
+            <div class="category-item animate-on-scroll scale-up">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/classic-lashes.jpg" alt="Classic Lashes">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/extensions-lashes.jpg" alt="Extensions Lashes">
                     <div class="category-overlay">
                         <div class="category-content">
-                            <h3 class="category-title">Classic Lashes</h3>
-                            <p class="category-description">Natural, elegant look for everyday wear</p>
-                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=classic" class="category-btn">Shop Now</a>
+                            <h3 class="category-title">Extensions Lashes</h3>
+                            <p class="category-description">Professional lash extensions for stunning length</p>
+                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=extensions" class="category-btn">Shop Now</a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="category-item">
+
+            <div class="category-item animate-on-scroll scale-up">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/volume-lashes.jpg" alt="Volume Lashes">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/faux-mink.jpg" alt="Faux Mink">
                     <div class="category-overlay">
                         <div class="category-content">
-                            <h3 class="category-title">Volume Lashes</h3>
-                            <p class="category-description">Fuller, dramatic lashes for special occasions</p>
-                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=volume" class="category-btn">Shop Now</a>
+                            <h3 class="category-title">Faux Mink</h3>
+                            <p class="category-description">Cruelty-free luxury with natural appearance</p>
+                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=faux-mink" class="category-btn">Shop Now</a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="category-item">
+
+            <div class="category-item animate-on-scroll scale-up">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/hybrid-lashes.jpg" alt="Hybrid Lashes">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/real-mink.jpg" alt="Real Mink">
                     <div class="category-overlay">
                         <div class="category-content">
-                            <h3 class="category-title">Hybrid Lashes</h3>
-                            <p class="category-description">Perfect balance of natural and volume</p>
-                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=hybrid" class="category-btn">Shop Now</a>
+                            <h3 class="category-title">Real Mink</h3>
+                            <p class="category-description">Premium authentic mink for ultimate luxury</p>
+                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=real-mink" class="category-btn">Shop Now</a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="category-item">
+
+            <div class="category-item animate-on-scroll scale-up">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/accessories.jpg" alt="Lash Accessories">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/gift-sets.jpg" alt="Gift Sets">
                     <div class="category-overlay">
                         <div class="category-content">
-                            <h3 class="category-title">Accessories</h3>
-                            <p class="category-description">Tools and care products for lash maintenance</p>
-                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=accessories" class="category-btn">Shop Now</a>
+                            <h3 class="category-title">Gift Sets</h3>
+                            <p class="category-description">Perfect gifts for lash lovers and beginners</p>
+                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=gift-sets" class="category-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-item animate-on-scroll scale-up">
+                <div class="category-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/tools.jpg" alt="Tools">
+                    <div class="category-overlay">
+                        <div class="category-content">
+                            <h3 class="category-title">Tools</h3>
+                            <p class="category-description">Professional tools for perfect application</p>
+                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=tools" class="category-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-item animate-on-scroll scale-up">
+                <div class="category-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/glue.jpg" alt="Glue">
+                    <div class="category-overlay">
+                        <div class="category-content">
+                            <h3 class="category-title">Glue</h3>
+                            <p class="category-description">High-quality adhesives for long-lasting hold</p>
+                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=glue" class="category-btn">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -190,9 +216,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -300,25 +326,25 @@ window.addEventListener('DOMContentLoaded', function() {
     .categories-section {
         padding: 60px 0;
     }
-    
+
     .section-title {
         font-size: 28px;
     }
-    
+
     .categories-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
         padding: 0 15px;
     }
-    
+
     .category-image {
         height: 280px;
     }
-    
+
     .category-title {
         font-size: 20px;
     }
-    
+
     .category-description {
         font-size: 14px;
     }
@@ -328,7 +354,7 @@ window.addEventListener('DOMContentLoaded', function() {
     .categories-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .section-header {
         margin-bottom: 40px;
     }
