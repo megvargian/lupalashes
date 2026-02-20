@@ -405,8 +405,8 @@ body.menu-open .site-header .header-icons {
 
 .hero-slider {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  height: 65vh;
+  min-height: 400px;
   overflow: hidden;
 }
 .hero-slider .hero-swiper {

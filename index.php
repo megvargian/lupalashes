@@ -100,6 +100,241 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<!-- Categories Section -->
+<section class="categories-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Shop by Category</h2>
+            <p class="section-subtitle">Discover our premium lash collections</p>
+        </div>
+        <div class="categories-grid">
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/classic-lashes.jpg" alt="Classic Lashes">
+                    <div class="category-overlay">
+                        <div class="category-content">
+                            <h3 class="category-title">Classic Lashes</h3>
+                            <p class="category-description">Natural, elegant look for everyday wear</p>
+                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=classic" class="category-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/volume-lashes.jpg" alt="Volume Lashes">
+                    <div class="category-overlay">
+                        <div class="category-content">
+                            <h3 class="category-title">Volume Lashes</h3>
+                            <p class="category-description">Fuller, dramatic lashes for special occasions</p>
+                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=volume" class="category-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/hybrid-lashes.jpg" alt="Hybrid Lashes">
+                    <div class="category-overlay">
+                        <div class="category-content">
+                            <h3 class="category-title">Hybrid Lashes</h3>
+                            <p class="category-description">Perfect balance of natural and volume</p>
+                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=hybrid" class="category-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/accessories.jpg" alt="Lash Accessories">
+                    <div class="category-overlay">
+                        <div class="category-content">
+                            <h3 class="category-title">Accessories</h3>
+                            <p class="category-description">Tools and care products for lash maintenance</p>
+                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=accessories" class="category-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.categories-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.category-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.category-image {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover .category-image img {
+    transform: scale(1.1);
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.9), rgba(195, 148, 99, 0.9));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.category-item:hover .category-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.category-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover .category-content {
+    transform: translateY(0);
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.category-description {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.95;
+    line-height: 1.5;
+}
+
+.category-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: white;
+    color: #d4a574;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-btn:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    color: #c39463;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .categories-section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .category-image {
+        height: 280px;
+    }
+    
+    .category-title {
+        font-size: 20px;
+    }
+    
+    .category-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+}
+</style>
+
 <!-- Features Section -->
 <section class="features-section">
     <div class="container">
