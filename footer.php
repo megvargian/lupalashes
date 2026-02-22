@@ -109,8 +109,8 @@
                                 <li><a href="<?php echo wc_get_page_permalink('myaccount'); ?>">My Account</a></li>
                                 <li><a href="<?php echo wc_get_page_permalink('cart'); ?>">Shopping Cart</a></li>
                                 <li><a href="<?php echo wc_get_page_permalink('checkout'); ?>">Checkout</a></li>
-                                <li><a href="<?php echo site_url('/terms-conditions'); ?>">Shipping Info</a></li>
-                                <li><a href="<?php echo site_url('/terms-conditions'); ?>">Returns & Exchanges</a></li>
+                                <li><a href="<?php echo site_url('/terms-and-conditions'); ?>">Shipping Info</a></li>
+                                <li><a href="<?php echo site_url('/terms-and-conditions'); ?>">Returns & Exchanges</a></li>
                             </ul>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
                         <div class="footer-legal">
                             <a href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a>
                             <span class="separator">|</span>
-                            <a href="<?php echo site_url('/terms-conditions'); ?>">Terms & Conditions</a>
+                            <a href="<?php echo site_url('/terms-and-conditions'); ?>">Terms & Conditions</a>
                         </div>
                     </div>
                 </div>
