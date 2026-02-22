@@ -259,7 +259,7 @@ window.addEventListener('DOMContentLoaded', function() {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(212, 165, 116, 0.9), rgba(195, 148, 99, 0.9));
+    background: #d1c2b4;
     display: flex;
     align-items: center;
     justify-content: center;

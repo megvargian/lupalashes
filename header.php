@@ -25,7 +25,7 @@
             <div class="header-container">
                 <div class="site-logo">
                     <a href="<?php echo home_url('/'); ?>" class="logo-link">
-                        <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Lupa logo_menubar-black.png" alt="Lupalashes Logo" class="logo-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Lupa_logo_transparent.png" alt="Lupalashes" class="logo-image">
                     </a>
                 </div>
 
