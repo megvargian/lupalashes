@@ -233,7 +233,7 @@ $grid-breakpoints: (
                     }
 
                     &:hover {
-                        color: #d4a574;
+                        color: #d1c2b4;
                     }
                 }
 
@@ -277,7 +277,7 @@ $grid-breakpoints: (
                 transition: color 0.3s ease;
 
                 &:hover {
-                    color: #d4a574;
+                    color: #d1c2b4;
                 }
 
                 &.cart-icon {
@@ -285,7 +285,7 @@ $grid-breakpoints: (
                         position: absolute;
                         top: -8px;
                         right: -8px;
-                        background: #d4a574;
+                        background: #d1c2b4;
                         color: #fff;
                         font-size: 10px;
                         width: 18px;
@@ -555,7 +555,7 @@ body.menu-open {
     text-align: center;
 
     &.btn-primary {
-        background: #d4a574;
+        background: #d1c2b4;
         color: #fff;
 
         &:hover {
@@ -621,7 +621,7 @@ body.menu-open {
             transform: translateY(-10px);
 
             .feature-icon {
-                background: #d4a574;
+                background: #d1c2b4;
                 color: #fff;
             }
         }
@@ -636,7 +636,7 @@ body.menu-open {
             align-items: center;
             justify-content: center;
             font-size: 32px;
-            color: #d4a574;
+            color: #d1c2b4;
             transition: all 0.3s ease;
         }
 
@@ -690,7 +690,7 @@ body.menu-open {
     .about-text {
         .section-subtitle {
             display: inline-block;
-            color: #d4a574;
+            color: #d1c2b4;
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -739,7 +739,7 @@ body.menu-open {
 
         .section-subtitle {
             display: inline-block;
-            color: #d4a574;
+            color: #d1c2b4;
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -833,7 +833,7 @@ body.menu-open {
             .product-price {
                 font-size: 20px;
                 font-weight: 700;
-                color: #d4a574;
+                color: #d1c2b4;
             }
         }
     }
@@ -859,7 +859,7 @@ body.menu-open {
 
         .section-subtitle {
             display: inline-block;
-            color: #d4a574;
+            color: #d1c2b4;
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -932,7 +932,7 @@ body.menu-open {
 // CTA Section
 .cta-section {
     padding: 100px 20px;
-    background: linear-gradient(135deg, #d4a574 0%, #c39463 100%);
+    background: linear-gradient(135deg, #d1c2b4 0%, #c39463 100%);
     color: #fff;
 
     .container {
@@ -1021,7 +1021,7 @@ body.menu-open {
     .terms-content {
         padding: 20px;
     }
-    
+
     .terms-section .section-heading {
         font-size: 20px;
     }
@@ -1148,20 +1148,20 @@ body.menu-open {
     .faq-content {
         padding: 20px;
     }
-    
+
     .faq-category .category-heading {
         font-size: 24px;
     }
-    
+
     .faq-question {
         font-size: 16px;
         padding: 15px;
     }
-    
+
     .faq-answer {
         padding: 15px;
     }
-    
+
     .faq-contact {
         padding: 25px;
     }

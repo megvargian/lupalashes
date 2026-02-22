@@ -160,7 +160,7 @@
 
     <style>
     .site-footer {
-        background: linear-gradient(135deg, #d4a574 0%, #c39463 100%);
+        background: linear-gradient(135deg, #d1c2b4 0%, #c39463 100%);
         color: #fff;
         position: relative;
         z-index: 1;

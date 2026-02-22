@@ -151,7 +151,7 @@ get_header();
     font-weight: 600;
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 3px solid #d4a574;
+    border-bottom: 3px solid #d1c2b4;
     position: relative;
 }
 
@@ -178,7 +178,7 @@ get_header();
 }
 
 .faq-question {
-    background: linear-gradient(135deg, #d4a574, #c39463);
+    background: linear-gradient(135deg, #d1c2b4, #c39463);
     color: white;
     padding: 20px 25px;
     margin: 0;
@@ -225,12 +225,12 @@ get_header();
 }
 
 .faq-answer strong {
-    color: #d4a574;
+    color: #d1c2b4;
     font-weight: 600;
 }
 
 .faq-contact {
-    background: linear-gradient(135deg, #d4a574, #c39463);
+    background: linear-gradient(135deg, #d1c2b4, #c39463);
     color: white;
     padding: 40px;
     border-radius: 15px;
@@ -253,7 +253,7 @@ get_header();
 
 .faq-contact .btn {
     background: white;
-    color: #d4a574;
+    color: #d1c2b4;
     border: none;
     padding: 12px 30px;
     font-size: 16px;

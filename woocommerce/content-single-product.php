@@ -340,7 +340,7 @@ jQuery(document).ready(function($) {
 }
 
 .image-zoom-btn:hover {
-	background: #d4a574;
+	background: #d1c2b4;
 	color: white;
 	transform: scale(1.1);
 	box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
@@ -413,8 +413,8 @@ jQuery(document).ready(function($) {
 }
 
 .zoom-modal-close:hover {
-	background: #d4a574;
-	border-color: #d4a574;
+	background: #d1c2b4;
+	border-color: #d1c2b4;
 	transform: scale(1.1);
 }
 
@@ -462,7 +462,7 @@ jQuery(document).ready(function($) {
 }
 
 .zoom-nav-btn:hover {
-	background: #d4a574;
+	background: #d1c2b4;
 	color: white;
 	transform: scale(1.1);
 }
@@ -547,7 +547,7 @@ body.zoom-modal-open {
 	transform: translateX(-50%);
 	width: 80px;
 	height: 3px;
-	background: #d4a574;
+	background: #d1c2b4;
 	border-radius: 2px;
 }
 
@@ -584,7 +584,7 @@ body.zoom-modal-open {
 }
 
 .product-full-description a {
-	color: #d4a574;
+	color: #d1c2b4;
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
@@ -603,7 +603,7 @@ body.zoom-modal-open {
 
 .product-full-description blockquote {
 	background: #fff;
-	border-left: 4px solid #d4a574;
+	border-left: 4px solid #d1c2b4;
 	padding: 20px 25px;
 	margin: 25px 0;
 	font-style: italic;

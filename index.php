@@ -303,7 +303,7 @@ window.addEventListener('DOMContentLoaded', function() {
     display: inline-block;
     padding: 12px 30px;
     background: white;
-    color: #d4a574;
+    color: #d1c2b4;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 600;
