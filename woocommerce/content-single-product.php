@@ -129,6 +129,27 @@ if ( post_password_required() ) {
 		</div>
 	</div>
 
+	<!-- Product Long Description Section -->
+	<?php
+	$product_description = get_the_content();
+	if ( ! empty( $product_description ) ) : ?>
+	<div class="product-description-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="product-description-wrapper">
+					<h3 class="section-title">Product Description</h3>
+					<div class="product-full-description">
+						<?php
+						// Display the full product description
+						the_content();
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php endif; ?>
+
 	<!-- Related Products Section -->
 	<div class="related-products-section">
 		<div class="row">
@@ -492,6 +513,138 @@ body.zoom-modal-open {
 @media (max-width: 480px) {
 	.zoom-navigation {
 		padding: 0 10px;
+	}
+}
+
+/* Product Description Section */
+.product-description-section {
+	margin: 60px 0;
+	padding: 40px 0;
+	background: #f9f9f9;
+	border-radius: 12px;
+}
+
+.product-description-wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.product-description-section .section-title {
+	font-size: 28px;
+	font-weight: 600;
+	color: #333;
+	text-align: center;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.product-description-section .section-title::after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 3px;
+	background: #d4a574;
+	border-radius: 2px;
+}
+
+.product-full-description {
+	font-size: 16px;
+	line-height: 1.7;
+	color: #555;
+	text-align: left;
+}
+
+.product-full-description p {
+	margin-bottom: 20px;
+}
+
+.product-full-description h1,
+.product-full-description h2,
+.product-full-description h3,
+.product-full-description h4,
+.product-full-description h5,
+.product-full-description h6 {
+	color: #333;
+	margin: 25px 0 15px 0;
+	font-weight: 600;
+}
+
+.product-full-description ul,
+.product-full-description ol {
+	margin: 20px 0;
+	padding-left: 30px;
+}
+
+.product-full-description li {
+	margin-bottom: 8px;
+}
+
+.product-full-description a {
+	color: #d4a574;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.product-full-description a:hover {
+	color: #b8935f;
+	text-decoration: underline;
+}
+
+.product-full-description img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin: 20px 0;
+}
+
+.product-full-description blockquote {
+	background: #fff;
+	border-left: 4px solid #d4a574;
+	padding: 20px 25px;
+	margin: 25px 0;
+	font-style: italic;
+	border-radius: 0 8px 8px 0;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for description section */
+@media (max-width: 768px) {
+	.product-description-section {
+		margin: 40px 0;
+		padding: 30px 0;
+	}
+
+	.product-description-wrapper {
+		padding: 0 15px;
+	}
+
+	.product-description-section .section-title {
+		font-size: 24px;
+		margin-bottom: 25px;
+	}
+
+	.product-full-description {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	.product-description-section {
+		margin: 30px 0;
+		padding: 25px 0;
+	}
+
+	.product-description-section .section-title {
+		font-size: 22px;
+		margin-bottom: 20px;
+	}
+
+	.product-full-description {
+		font-size: 14px;
 	}
 }
 </style>
