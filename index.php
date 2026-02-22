@@ -318,7 +318,7 @@ window.addEventListener('DOMContentLoaded', function() {
     background: #f8f9fa;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    color: #c39463;
+    color: #d1c2b4;
     text-decoration: none;
 }
 
