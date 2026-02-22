@@ -137,7 +137,7 @@ if ( post_password_required() ) {
 		<div class="row">
 			<div class="col-12">
 				<div class="product-description-wrapper">
-					<h3 class="section-title">Product Description</h3>
+					<h3 class="section-title">Description</h3>
 					<div class="product-full-description">
 						<?php
 						// Display the full product description
