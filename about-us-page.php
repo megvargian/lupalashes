@@ -97,7 +97,7 @@ get_header();
 </section>
 
 <!-- Team Section (Optional) -->
-<section class="team-section">
+<!-- <section class="team-section">
     <div class="container">
         <div class="section-header text-center">
             <h2 class="section-title">Meet Our Team</h2>
@@ -142,6 +142,6 @@ get_header();
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <?php
 get_footer();
