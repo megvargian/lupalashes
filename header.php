@@ -24,13 +24,9 @@
         <header class="site-header">
             <div class="header-container">
                 <div class="site-logo">
-                    <?php if (has_custom_logo()) : ?>
-                        <?php the_custom_logo(); ?>
-                    <?php else : ?>
-                        <a href="<?php echo home_url('/'); ?>" class="logo-text">
-                            <span class="brand-name">LUPALASHES</span>
-                        </a>
-                    <?php endif; ?>
+                    <a href="<?php echo home_url('/'); ?>" class="logo-link">
+                        <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Lupa logo_menubar-black.png" alt="Lupalashes Logo" class="logo-image">
+                    </a>
                 </div>
 
                 <nav class="main-navigation">
