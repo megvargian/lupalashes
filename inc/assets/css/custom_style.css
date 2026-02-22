@@ -297,9 +297,9 @@ body.hide_scroll {
     width: 100%;
   }
 }
-.site-header .main-navigation .nav-menu li a:hover {
+{{/* .site-header .main-navigation .nav-menu li a:hover {
   color: #d1c2b4;
-}
+} */}}
 .site-header .main-navigation .nav-menu li.menu-item-has-children::after {
   content: "";
   position: absolute;
