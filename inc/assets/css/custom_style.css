@@ -1633,6 +1633,6 @@ body.menu-open .site-header .header-icons {
   justify-content: center;
 }
 
-.stock {
-  display: none;
+.stock.in-stock {
+  display: none !important;
 }
