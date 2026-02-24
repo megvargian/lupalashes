@@ -1632,3 +1632,7 @@ body.menu-open .site-header .header-icons {
   align-items: center;
   justify-content: center;
 }
+
+.stock {
+  display: none;
+}

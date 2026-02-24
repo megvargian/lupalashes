@@ -115,14 +115,14 @@ if ( post_password_required() ) {
 						?>
 
 						<!-- Additional Product Information -->
-						<div class="product-additional-info">
+						<!-- <div class="product-additional-info">
 							<ul class="product-features">
 								<li><i class="fas fa-shipping-fast"></i> Free Shipping Over $150</li>
 								<li><i class="fas fa-undo"></i> Easy Returns & Refunds</li>
 								<li><i class="fas fa-shield-alt"></i> Secure Payment</li>
 								<li><i class="fas fa-truck"></i> 2-4 Business Days Delivery</li>
 							</ul>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
