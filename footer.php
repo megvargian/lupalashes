@@ -269,6 +269,13 @@
         margin-bottom: 20px;
         color: rgba(255, 255, 255, 0.8);
     }
+    @media (max-width: 767px) {
+        .footer-contact .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 
     .footer-contact .contact-item i {
         margin-right: 15px;
