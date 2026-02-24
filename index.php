@@ -465,7 +465,16 @@ window.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 <div class="product-info">
-                    <p class="product-vendor">Samra Beauty</p>
+                    <?php
+                    $product_categories = get_the_terms(get_the_ID(), 'product_cat');
+                    if ($product_categories && !is_wp_error($product_categories)) {
+                        $first_category = $product_categories[0];
+                        $category_link = get_term_link($first_category);
+                        echo '<p class="product-vendor"><a href="' . esc_url($category_link) . '">' . esc_html($first_category->name) . '</a></p>';
+                    } else {
+                        echo '<p class="product-vendor">Uncategorized</p>';
+                    }
+                    ?>
                     <h3 class="product-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     <div class="product-price-wrapper">
                         <span class="product-price"><?php echo $product->get_price_html(); ?></span>
@@ -513,7 +522,16 @@ window.addEventListener('DOMContentLoaded', function() {
                                 </div>
                             </div>
                             <div class="product-info">
-                                <p class="product-vendor">Samra Beauty</p>
+                                <?php
+                                $product_categories = get_the_terms(get_the_ID(), 'product_cat');
+                                if ($product_categories && !is_wp_error($product_categories)) {
+                                    $first_category = $product_categories[0];
+                                    $category_link = get_term_link($first_category);
+                                    echo '<p class="product-vendor"><a href="' . esc_url($category_link) . '">' . esc_html($first_category->name) . '</a></p>';
+                                } else {
+                                    echo '<p class="product-vendor">Uncategorized</p>';
+                                }
+                                ?>
                                 <h3 class="product-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <div class="product-price-wrapper">
                                     <span class="product-price"><?php echo $product->get_price_html(); ?></span>
