@@ -216,10 +216,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     max-width: 1400px;
     margin: 0 auto;
+    justify-items: center;
+    align-items: center;
 }
 
 .category-item {
@@ -332,7 +334,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     .categories-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: 1fr;
         gap: 20px;
         padding: 0 15px;
     }
