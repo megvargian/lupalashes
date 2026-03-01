@@ -11,20 +11,12 @@ get_header();
         <div class="swiper-wrapper">
             <!-- Slide 1 -->
             <div class="swiper-slide">
-                <div class="slide-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/assets/images/slide1.jpg');">
+                <div class="slide-bg video-slide">
+                    <video autoplay muted loop playsinline class="slide-video">
+                        <source src="<?php echo get_template_directory_uri(); ?>/inc/assets/videos/video-slide-1.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class="slide-overlay"></div>
-                    <div class="slide-content">
-                        <div class="container">
-                            <div class="content-wrapper">
-                                <span class="slide-subtitle">Premium Lash Collection</span>
-                                <h1 class="slide-title">ELEVATE YOUR<br>NATURAL BEAUTY</h1>
-                                <p class="slide-description">Discover our luxury lash extensions designed to enhance your natural elegance</p>
-                                <div class="slide-buttons">
-                                    <a href="#" class="btn btn-white">SHOP NOW</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
