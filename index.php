@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var heroSwiper = new Swiper('.hero-swiper', {
         loop: true,
         autoplay: {
-            delay: 5000,
+            delay: 7000,
             disableOnInteraction: false,
         },
         pagination: {
