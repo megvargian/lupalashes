@@ -22,25 +22,17 @@ get_header();
 
             <!-- Slide 2 -->
             <div class="swiper-slide">
-                <div class="slide-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/assets/images/slide2.jpg');">
+                <div class="slide-bg video-slide">
+                    <video autoplay muted loop playsinline class="slide-video">
+                        <source src="<?php echo get_template_directory_uri(); ?>/inc/assets/videos/video-slide-2.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class="slide-overlay"></div>
-                    <div class="slide-content">
-                        <div class="container">
-                            <div class="content-wrapper">
-                                <span class="slide-subtitle">Professional Application</span>
-                                <h1 class="slide-title">EXPERTLY<br>CRAFTED LASHES</h1>
-                                <p class="slide-description">Experience the art of professional lash extension application</p>
-                                <div class="slide-buttons">
-                                    <a href="#" class="btn btn-white">SHOP NOW</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
             <!-- Slide 3 -->
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
                 <div class="slide-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/assets/images/slide3.jpg');">
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
@@ -56,7 +48,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <!-- Navigation -->
