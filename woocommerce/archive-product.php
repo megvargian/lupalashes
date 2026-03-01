@@ -38,8 +38,10 @@ get_header( 'shop' );
 				do_action( 'woocommerce_before_main_content' );
 			?>
 
-			<!-- Main Product Content by Categories -->
+			<!-- Main Product Content -->
 			<div class="shop-main-content col-12">
+				<?php if ( is_shop() && !is_product_category() ) : // Category-grouped layout for main shop page only ?>
+
 				<?php
 				// Get all product categories
 				$product_categories = get_terms( array(
@@ -159,6 +161,88 @@ get_header( 'shop' );
 
 				<?php endif; ?>
 
+				<?php else : // Standard layout for category pages ?>
+
+				<?php if ( woocommerce_product_loop() ) : ?>
+
+					<!-- Toolbar with sorting and view options -->
+					<div class="shop-toolbar">
+						<div class="toolbar-left">
+							<p class="woocommerce-result-count">
+								<?php
+								$total = wc_get_loop_prop( 'total' );
+								$per_page = wc_get_loop_prop( 'per_page' );
+								$current = wc_get_loop_prop( 'current_page' );
+								$first = ( $per_page * $current ) - $per_page + 1;
+								$last = min( $total, $per_page * $current );
+								printf( __( 'Showing %d-%d of %d results', 'woocommerce' ), $first, $last, $total );
+								?>
+							</p>
+						</div>
+						<div class="toolbar-right">
+							<?php
+							/**
+							 * Hook: woocommerce_before_shop_loop.
+							 *
+							 * @hooked woocommerce_catalog_ordering - 30
+							 */
+							do_action( 'woocommerce_before_shop_loop' );
+							?>
+						</div>
+					</div>
+
+					<!-- Products Grid -->
+					<div class="products-grid-wrapper">
+						<div class="row modern-products-grid">
+							<?php
+							while ( have_posts() ) {
+								the_post();
+								?>
+								<div class="col-lg-3 col-md-4 col-6 mb-4 product-col">
+									<?php
+									/**
+									 * Hook: woocommerce_shop_loop.
+									 */
+									do_action( 'woocommerce_shop_loop' );
+									wc_get_template_part( 'content', 'product' );
+									?>
+								</div>
+								<?php
+							}
+							?>
+						</div>
+					</div>
+
+					<!-- Pagination -->
+					<div class="shop-pagination">
+						<?php
+						/**
+						 * Hook: woocommerce_after_shop_loop.
+						 *
+						 * @hooked woocommerce_pagination - 10
+						 */
+						do_action( 'woocommerce_after_shop_loop' );
+						?>
+					</div>
+
+				<?php else : ?>
+
+					<!-- No products found -->
+					<div class="no-products-found">
+						<div class="no-products-message">
+							<i class="fas fa-search"></i>
+							<h3><?php _e( 'No products found', 'woocommerce' ); ?></h3>
+							<p><?php _e( 'No products were found matching your selection.', 'woocommerce' ); ?></p>
+							<a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>" class="btn btn-primary">
+								<?php _e( 'View All Products', 'woocommerce' ); ?>
+							</a>
+						</div>
+					</div>
+
+				<?php endif; ?>
+
+				<?php endif; // End conditional layout ?>
+
 				<?php
 				/**
 				 * Hook: woocommerce_after_main_content.
@@ -170,8 +254,9 @@ get_header( 'shop' );
 	</div>
 </div>
 
+<?php if ( is_shop() && !is_product_category() ) : ?>
 <style>
-/* Category Section Styles */
+/* Category Section Styles - Only for main shop page */
 .category-section {
 	margin-bottom: 80px;
 }
@@ -341,6 +426,7 @@ get_header( 'shop' );
 	}
 }
 </style>
+<?php endif; // End CSS conditional ?>
 
 <?php
 get_footer( 'shop' );
