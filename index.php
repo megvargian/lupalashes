@@ -261,7 +261,7 @@ window.addEventListener('DOMContentLoaded', function() {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #d1c2b4;
+    background: rgba(209, 194, 180, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,7 +305,7 @@ window.addEventListener('DOMContentLoaded', function() {
     display: inline-block;
     padding: 12px 30px;
     background: white;
-    color: #d1c2b4;
+    color: #d1c2b4 !important;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 600;
