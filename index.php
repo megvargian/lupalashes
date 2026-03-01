@@ -110,7 +110,7 @@ window.addEventListener('DOMContentLoaded', function() {
         <div class="categories-grid">
             <div class="category-item">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/extensions-lashes.jpg" alt="Extensions Lashes">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/extensions-lashes.webp" alt="Extensions Lashes">
                     <div class="category-overlay">
                         <div class="category-content">
                             <h3 class="category-title">Extensions Lashes</h3>
@@ -123,7 +123,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             <div class="category-item">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/faux-mink.jpg" alt="Faux Mink">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/faux-mink.webp" alt="Faux Mink">
                     <div class="category-overlay">
                         <div class="category-content">
                             <h3 class="category-title">Faux Mink</h3>
@@ -136,7 +136,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             <div class="category-item">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/real-mink.jpg" alt="Real Mink">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/real-mink.webp" alt="Real Mink">
                     <div class="category-overlay">
                         <div class="category-content">
                             <h3 class="category-title">Real Mink</h3>
@@ -149,7 +149,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             <div class="category-item">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/gift-sets.jpg" alt="Gift Sets">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/gift-sets.webp" alt="Gift Sets">
                     <div class="category-overlay">
                         <div class="category-content">
                             <h3 class="category-title">Gift Sets</h3>
@@ -162,7 +162,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             <div class="category-item">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/tools.jpg" alt="Tools">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/tools.webp" alt="Tools">
                     <div class="category-overlay">
                         <div class="category-content">
                             <h3 class="category-title">Tools</h3>
@@ -175,7 +175,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             <div class="category-item">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/glue.jpg" alt="Glue">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/glue.webp" alt="Glue">
                     <div class="category-overlay">
                         <div class="category-content">
                             <h3 class="category-title">Glue</h3>
