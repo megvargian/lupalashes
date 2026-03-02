@@ -99,7 +99,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         <div class="category-content">
                             <h3 class="category-title">Extensions Lashes</h3>
                             <p class="category-description">Professional lash extensions for stunning length</p>
-                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=extensions" class="category-btn">Shop Now</a>
+                            <a href="/product-category/extensions-lashes/" class="category-btn">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         <div class="category-content">
                             <h3 class="category-title">Faux Mink</h3>
                             <p class="category-description">Cruelty-free luxury with natural appearance</p>
-                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=faux-mink" class="category-btn">Shop Now</a>
+                            <a href="/product-category/faux-mink/" class="category-btn">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         <div class="category-content">
                             <h3 class="category-title">Real Mink</h3>
                             <p class="category-description">Premium authentic mink for ultimate luxury</p>
-                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=real-mink" class="category-btn">Shop Now</a>
+                            <a href="/product-category/real-mink/" class="category-btn">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         <div class="category-content">
                             <h3 class="category-title">Gift Sets</h3>
                             <p class="category-description">Perfect gifts for lash lovers and beginners</p>
-                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=gift-sets" class="category-btn">Shop Now</a>
+                            <a href="/product-category/gift-sets/" class="category-btn">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         <div class="category-content">
                             <h3 class="category-title">Tools</h3>
                             <p class="category-description">Professional tools for perfect application</p>
-                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=tools" class="category-btn">Shop Now</a>
+                            <a href="/product-category/tools/" class="category-btn">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -164,7 +164,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         <div class="category-content">
                             <h3 class="category-title">Glue</h3>
                             <p class="category-description">High-quality adhesives for long-lasting hold</p>
-                            <a href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>?product_cat=glue" class="category-btn">Shop Now</a>
+                            <a href="/product-category/glue/" class="category-btn">Shop Now</a>
                         </div>
                     </div>
                 </div>

@@ -94,6 +94,72 @@ body.woocommerce-account {
 }
 
 /* ========================================
+   FULL WIDTH CHECKOUT STYLES
+   ======================================== */
+.fullwidth-page-content .woocommerce-checkout .woocommerce {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.fullwidth-page-content .woocommerce-cart .woocommerce {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.fullwidth-page-content .woocommerce-account .woocommerce {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Improve spacing for full width checkout */
+.fullwidth-page-content .checkout_coupon,
+.fullwidth-page-content .woocommerce-checkout-review-order {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.fullwidth-page-content .woocommerce form .form-row {
+  margin-bottom: 20px;
+}
+
+.fullwidth-page-content .woocommerce form .form-row input,
+.fullwidth-page-content .woocommerce form .form-row select,
+.fullwidth-page-content .woocommerce form .form-row textarea {
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  padding: 12px 15px;
+}
+
+.fullwidth-page-content .woocommerce #payment {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.fullwidth-page-content .woocommerce #place_order {
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: #d1c2b4;
+  border: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.fullwidth-page-content .woocommerce #place_order:hover {
+  background-color: #bfa994;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
    SHOP PAGE STYLES
    ======================================== */
 
