@@ -94,69 +94,77 @@ body.woocommerce-account {
 }
 
 /* ========================================
-   FULL WIDTH CHECKOUT STYLES
+   FULL HEIGHT WOOCOMMERCE PAGES STYLES
    ======================================== */
-.fullwidth-page-content .woocommerce-checkout .woocommerce {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.woocommerce-page-wrapper .woocommerce-checkout .woocommerce {
+  background: #ffffff;
+  padding: 40px 0;
 }
 
-.fullwidth-page-content .woocommerce-cart .woocommerce {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.woocommerce-page-wrapper .woocommerce-cart .woocommerce {
+  background: #ffffff;
+  padding: 40px 0;
 }
 
-.fullwidth-page-content .woocommerce-account .woocommerce {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.woocommerce-page-wrapper .woocommerce-account .woocommerce {
+  background: #ffffff;
+  padding: 40px 0;
 }
 
-/* Improve spacing for full width checkout */
-.fullwidth-page-content .checkout_coupon,
-.fullwidth-page-content .woocommerce-checkout-review-order {
+/* Improve spacing for checkout pages */
+.woocommerce-page-wrapper .checkout_coupon,
+.woocommerce-page-wrapper .woocommerce-checkout-review-order {
   background: #f8f9fa;
   border-radius: 8px;
-  padding: 30px;
-  margin-bottom: 30px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 1px solid #e9ecef;
 }
 
-.fullwidth-page-content .woocommerce form .form-row {
+.woocommerce-page-wrapper .woocommerce form .form-row {
   margin-bottom: 20px;
 }
 
-.fullwidth-page-content .woocommerce form .form-row input,
-.fullwidth-page-content .woocommerce form .form-row select,
-.fullwidth-page-content .woocommerce form .form-row textarea {
+.woocommerce-page-wrapper .woocommerce form .form-row input,
+.woocommerce-page-wrapper .woocommerce form .form-row select,
+.woocommerce-page-wrapper .woocommerce form .form-row textarea {
   border-radius: 5px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #d1c2b4;
   padding: 12px 15px;
+  transition: border-color 0.3s ease;
 }
 
-.fullwidth-page-content .woocommerce #payment {
+.woocommerce-page-wrapper .woocommerce form .form-row input:focus,
+.woocommerce-page-wrapper .woocommerce form .form-row select:focus,
+.woocommerce-page-wrapper .woocommerce form .form-row textarea:focus {
+  border-color: #d09615;
+  box-shadow: 0 0 0 2px rgba(209, 194, 180, 0.2);
+}
+
+.woocommerce-page-wrapper .woocommerce #payment {
   background: #f8f9fa;
   border-radius: 8px;
-  padding: 30px;
+  padding: 25px;
+  border: 1px solid #e9ecef;
 }
 
-.fullwidth-page-content .woocommerce #place_order {
+.woocommerce-page-wrapper .woocommerce #place_order {
   width: 100%;
   padding: 15px 30px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   border-radius: 8px;
   background-color: #d1c2b4;
   border: none;
   color: #ffffff;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.fullwidth-page-content .woocommerce #place_order:hover {
-  background-color: #bfa994;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.woocommerce-page-wrapper .woocommerce #place_order:hover {
+  background-color: #d09615;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(209, 194, 180, 0.3);
 }
 
 /* ========================================

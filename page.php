@@ -12,20 +12,26 @@
  * @package WP_Bootstrap_Starter
  */
 
-get_header(); 
+get_header();
 
-// Check if this is a WooCommerce checkout or cart page for full width
-$is_fullwidth_page = (function_exists('is_checkout') && is_checkout()) || 
-					 (function_exists('is_cart') && is_cart()) ||
-					 (function_exists('is_account_page') && is_account_page());
+// Check if this is a WooCommerce page for special styling
+$is_checkout_page = function_exists('is_checkout') && is_checkout();
+$is_cart_page = function_exists('is_cart') && is_cart();
+$is_account_page = function_exists('is_account_page') && is_account_page();
 
-if ($is_fullwidth_page) : ?>
-	<div class="fullwidth-page-content">
-		<?php
-		while ( have_posts() ) : the_post();
-			the_content();
-		endwhile; // End of the loop.
-		?>
+if ($is_checkout_page || $is_cart_page || $is_account_page) : ?>
+	<div class="woocommerce-page-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<?php
+					while ( have_posts() ) : the_post();
+						the_content();
+					endwhile; // End of the loop.
+					?>
+				</div>
+			</div>
+		</div>
 	</div>
 <?php else : ?>
 	<div class="container">
