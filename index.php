@@ -133,7 +133,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             <div class="category-item">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/real-mink.webp" alt="Gift Sets">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/gift-sets.png" alt="Gift Sets">
                     <div class="category-overlay">
                         <div class="category-content">
                             <h3 class="category-title">Gift Sets</h3>
