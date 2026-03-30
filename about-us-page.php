@@ -19,7 +19,7 @@ get_header();
         <div class="row align-items-center mb-5">
             <div class="col-lg-6 col-md-12">
                 <div class="about-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/about-lashes.jpg" alt="About Lupalashes" class="img-fluid">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/about-1.webp" alt="About Lupalashes" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
@@ -34,7 +34,7 @@ get_header();
         <div class="row align-items-center mb-5 flex-lg-row-reverse">
             <div class="col-lg-6 col-md-12">
                 <div class="about-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/our-mission.jpg" alt="Our Mission" class="img-fluid">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/about-1.webp" alt="Our Mission" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">

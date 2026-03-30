@@ -82,7 +82,7 @@ get_header();
                         </div>
                         <div class="info-content">
                             <h4>Call Us</h4>
-                            <p><a href="tel:+11234567890">+1 (123) 456-7890</a></p>
+                            <p><a href="tel:+96179166216">+961 79166216</a></p>
                         </div>
                     </div>
 
@@ -92,7 +92,7 @@ get_header();
                         </div>
                         <div class="info-content">
                             <h4>Email Us</h4>
-                            <p><a href="mailto:info@lupalashes.com">info@lupalashes.com</a></p>
+                            <p><a href="mailto:lupa.eyelashes@gmail.com">lupa.eyelashes@gmail.com</a></p>
                         </div>
                     </div>
 

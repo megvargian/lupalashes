@@ -110,8 +110,8 @@ get_header();
                         <h2>Contact Us</h2>
                         <p>If you have any questions about this privacy policy or our privacy practices, please contact us:</p>
                         <ul>
-                            <li>Email: privacy@lupalashes.com</li>
-                            <li>Phone: [Your Phone Number]</li>
+                            <li>Email: <a href="mailto:lupa.eyelashes@gmail.com">lupa.eyelashes@gmail.com</a></li>
+                            <li>Phone: <a href="tel:+96179166216">+961 79166216</a></li>
                             <li>Address: [Your Business Address]</li>
                         </ul>
                     </div>

@@ -125,11 +125,11 @@
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
-                                <span>+1 (555) 123-4567</span>
+                                <span><a href="tel:+96179166216">+961 79166216</a></span>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
-                                <span><a href="mailto:info@lupalashes.com">info@lupalashes.com</a></span>
+                                <span><a href="mailto:lupa.eyelashes@gmail.com">lupa.eyelashes@gmail.com</a></span>
                             </div>
                         </div>
                     </div>

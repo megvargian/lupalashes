@@ -32,6 +32,15 @@ get_header();
             </div>
 
             <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <div class="slide-bg video-slide">
+                    <video autoplay muted loop playsinline class="slide-video">
+                        <source src="<?php echo get_template_directory_uri(); ?>/inc/assets/videos/video-ethereal.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="slide-overlay"></div>
+                </div>
+            </div>
             <!-- <div class="swiper-slide">
                 <div class="slide-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/assets/images/slide3.jpg');">
                     <div class="slide-overlay"></div>
@@ -159,7 +168,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             <div class="category-item">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/glue.webp" alt="Glue">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/glue-1.webp" alt="Glue">
                     <div class="category-overlay">
                         <div class="category-content">
                             <h3 class="category-title">Glue</h3>
@@ -388,7 +397,7 @@ window.addEventListener('DOMContentLoaded', function() {
     <div class="container">
         <div class="about-content">
             <div class="about-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/about-lashes.jpg" alt="About Lupalashes">
+                <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/about-lupalashes.webp" alt="About Lupalashes">
             </div>
             <div class="about-text">
                 <span class="section-subtitle">About Us</span>
