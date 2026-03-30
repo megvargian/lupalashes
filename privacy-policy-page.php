@@ -112,7 +112,6 @@ get_header();
                         <ul>
                             <li>Email: <a href="mailto:lupa.eyelashes@gmail.com">lupa.eyelashes@gmail.com</a></li>
                             <li>Phone: <a href="tel:+96179166216">+961 79166216</a></li>
-                            <li>Address: [Your Business Address]</li>
                         </ul>
                     </div>
 

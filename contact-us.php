@@ -66,7 +66,7 @@ get_header();
                 <div class="contact-info-wrapper">
                     <h2 class="section-heading">Get in Touch</h2>
 
-                    <div class="contact-info-item">
+                    <!-- <div class="contact-info-item">
                         <div class="info-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
@@ -74,7 +74,7 @@ get_header();
                             <h4>Visit Us</h4>
                             <p>123 Beauty Lane<br>Los Angeles, CA 90001<br>United States</p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="contact-info-item">
                         <div class="info-icon">
@@ -96,7 +96,7 @@ get_header();
                         </div>
                     </div>
 
-                    <div class="contact-info-item">
+                    <!-- <div class="contact-info-item">
                         <div class="info-icon">
                             <i class="fas fa-clock"></i>
                         </div>
@@ -106,7 +106,7 @@ get_header();
                             Saturday: 10:00 AM - 6:00 PM<br>
                             Sunday: Closed</p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="social-links">
                         <h4>Follow Us</h4>

@@ -19,7 +19,9 @@ get_header();
         <div class="row align-items-center mb-5">
             <div class="col-lg-6 col-md-12">
                 <div class="about-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/about-1.webp" alt="About Lupalashes" class="img-fluid">
+                    <video src="<?php echo get_template_directory_uri(); ?>/inc/assets/videos/video-ethereal.webm" class="img-fluid" autoplay muted loop playsinline>
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">

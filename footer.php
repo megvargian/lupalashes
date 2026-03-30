@@ -119,10 +119,10 @@
                     <div class="col-lg-3 col-md-6 mb-4">
                         <div class="footer-contact">
                             <h4 class="footer-title">Get In Touch</h4>
-                            <div class="contact-item">
+                            <!-- <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <span>123 Beauty Street<br>Fashion District, NY 10001</span>
-                            </div>
+                            </div> -->
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
                                 <span><a href="tel:+96179166216">+961 79166216</a></span>

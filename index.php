@@ -32,15 +32,6 @@ get_header();
             </div>
 
             <!-- Slide 3 -->
-            <div class="swiper-slide">
-                <div class="slide-bg video-slide">
-                    <video autoplay muted loop playsinline class="slide-video">
-                        <source src="<?php echo get_template_directory_uri(); ?>/inc/assets/videos/video-ethereal.webm" type="video/webm">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="slide-overlay"></div>
-                </div>
-            </div>
             <!-- <div class="swiper-slide">
                 <div class="slide-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/assets/images/slide3.jpg');">
                     <div class="slide-overlay"></div>
@@ -573,7 +564,7 @@ window.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!-- Testimonials Section -->
-<section class="testimonials-section">
+<!-- <section class="testimonials-section">
     <div class="container">
         <div class="section-header">
             <span class="section-subtitle">Testimonials</span>
@@ -621,7 +612,7 @@ window.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <?php
 get_footer();
