@@ -159,7 +159,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             <div class="category-item">
                 <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/glue-1.webp" alt="Glue">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/glue-2.webp" alt="Glue">
                     <div class="category-overlay">
                         <div class="category-content">
                             <h3 class="category-title">Glue</h3>
