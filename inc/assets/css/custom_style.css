@@ -1925,3 +1925,6 @@ body.menu-open .site-header .header-icons {
   box-shadow: none;
   text-shadow: none;
 }
+.woocommerce-info, .woocommerce-message{
+ padding-left: 50px !important;
+}
