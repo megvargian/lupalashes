@@ -336,7 +336,7 @@ jQuery(document).ready(function($) {
 	cursor: pointer;
 	transition: all 0.3s ease;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-	z-index: 10;
+	z-index: 0;
 }
 
 .image-zoom-btn:hover {
