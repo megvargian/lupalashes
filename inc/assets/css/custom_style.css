@@ -292,7 +292,7 @@ body.hide_scroll {
     padding: 20px 40px;
     font-size: 20px;
     border-bottom: none;
-    color: #000;
+    color: #000 !important;
     text-align: center;
     width: 100%;
   }
