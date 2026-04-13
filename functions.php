@@ -254,10 +254,19 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 // make the phone number required in the checkout page woocommerce classic checkout page
-add_filter( 'woocommerce_checkout_fields' , 'custom_require_billing_phone' );
+add_filter( 'woocommerce_checkout_fields', 'custom_require_billing_phone' );
+
 function custom_require_billing_phone( $fields ) {
+
+    // Make phone required
     $fields['billing']['billing_phone']['required'] = true;
+
+    // Change label text
+    $fields['billing']['billing_phone']['label'] = 'Phone';
+
+    // Remove optional text
+    $fields['billing']['billing_phone']['placeholder'] = 'Phone';
+
     return $fields;
 }
-
 
