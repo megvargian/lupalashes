@@ -253,5 +253,11 @@ if ( class_exists( 'WooCommerce' ) ) {
     require_once get_template_directory() . '/inc/woocommerce-ajax-functions.php';
 }
 
+// make the phone number required in the checkout page woocommerce classic checkout page
+add_filter( 'woocommerce_checkout_fields' , 'custom_require_billing_phone' );
+function custom_require_billing_phone( $fields ) {
+    $fields['billing']['billing_phone']['required'] = true;
+    return $fields;
+}
 
 
