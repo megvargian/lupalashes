@@ -92,18 +92,6 @@ window.addEventListener('DOMContentLoaded', function() {
             <p class="section-subtitle">Discover our premium lash collections</p>
         </div>
         <div class="categories-grid">
-            <div class="category-item">
-                <div class="category-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/extensions-lashes.webp" alt="Extensions Lashes">
-                    <div class="category-overlay">
-                        <div class="category-content">
-                            <h3 class="category-title">Extensions Lashes</h3>
-                            <p class="category-description">Professional lash extensions for stunning length</p>
-                            <a href="/product-category/extensions-lashes/" class="category-btn">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="category-item">
                 <div class="category-image">
@@ -113,6 +101,19 @@ window.addEventListener('DOMContentLoaded', function() {
                             <h3 class="category-title">Faux Mink</h3>
                             <p class="category-description">Cruelty-free luxury with natural appearance</p>
                             <a href="/product-category/faux-mink/" class="category-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/extensions-lashes.webp" alt="Extensions Lashes">
+                    <div class="category-overlay">
+                        <div class="category-content">
+                            <h3 class="category-title">Extensions Lashes</h3>
+                            <p class="category-description">Professional lash extensions for stunning length</p>
+                            <a href="/product-category/extensions-lashes/" class="category-btn">Shop Now</a>
                         </div>
                     </div>
                 </div>
